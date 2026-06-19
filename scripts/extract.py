@@ -104,18 +104,17 @@ def extract_text_content(html_content: str) -> list[str]:
     # 策略1: 提取所有 >文本内容<
     texts_raw = re.findall(r'>([^<>]{1,500})<', content)
 
-    # 策略2: 额外从 <td val=?> 和 <dd> 中提取（可能包含嵌套标签）
-    # 处理 table 中的选项数据
-    td_matches = re.findall(r'<td[^>]*>(.*?)</td>', content, re.DOTALL)
+    # 策略2: 额外从 <dd> 和 <span> 中提取（可能包含嵌套标签）
     dd_matches = re.findall(r'<dd>(.*?)</dd>', content, re.DOTALL)
     span_matches = re.findall(r'<span[^>]*class="?qtype"?[^>]*>(.*?)</span>', content, re.DOTALL)
 
     # 合并所有来源
     all_texts = []
-    for source_list in [texts_raw, td_matches, dd_matches, span_matches]:
+    for source_list in [texts_raw, dd_matches, span_matches]:
         for t in source_list:
-            t = strip_tags_fragment(t)  # 去除内嵌标签
-            t = t.strip()
+            t = strip_tags_fragment(t)    # 去除内嵌标签
+            t = t.strip()                 # 先去空白（在解码前，保留 &nbsp;）
+            t = decode_html_entities(t)   # 解码 &lt; &gt; &amp; &nbsp; → \u00A0
             if is_meaningful_text(t):
                 all_texts.append(t)
 
@@ -158,7 +157,6 @@ def parse_questions(texts: list[str]) -> list[dict]:
     re_type_tag = re.compile(r'^\[(单选题|多选题|判断题|简答题|填空题)\]')
 
     for text in texts:
-        text = text.strip()
 
         # --- 正确率标签（值可能在下一行）---
         if re_accuracy_label.match(text):

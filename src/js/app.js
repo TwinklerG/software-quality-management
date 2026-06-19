@@ -600,8 +600,12 @@ function renderResult(slug) {
 // ================================================================
 
 function escapeHtml(str) {
+  // 两步安全策略：先解码已有实体 → 再转义特殊字符
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = str;          // 解码 &lt; &gt; &amp; 等
+  const decoded = textarea.value;
   const div = document.createElement('div');
-  div.textContent = str;
+  div.textContent = decoded;         // 安全转义 < > & " 
   return div.innerHTML;
 }
 
