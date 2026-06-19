@@ -132,24 +132,25 @@ GitHub Repository
 ## 7. 项目文件结构
 
 ```
-├── .github/workflows/deploy.yml    # 810 B
+├── .github/workflows/deploy.yml    # GitHub Actions 部署
 ├── scripts/extract.py              # 数据提取（可复现）
-├── docs/
-│   ├── index.html                  # SPA 入口（773 B）
+├── src/                            # 静态站点源码
+│   ├── index.html                  # SPA 入口
 │   ├── .nojekyll
-│   ├── requirements.md             # 本文档
-│   ├── design.md                   # 详细设计文档
-│   ├── css/style.css               # 全局样式（16 KB）
+│   ├── css/style.css               # 全局样式
 │   ├── js/
-│   │   ├── app.js                  # 主应用 · 路由 · 渲染（20 KB）
-│   │   ├── quiz-engine.js          # 答题引擎 · 乱序 · 状态（7 KB）
-│   │   └── scorer.js               # 评分逻辑 · 纯函数（3 KB）
-│   ├── data/
-│   │   ├── scrum.json              # 20 题（13 KB）
-│   │   ├── xp.json                 # 20 题（15 KB）
-│   │   ├── agile.json              # 17 题（12 KB）
-│   │   └── kanban.json             # 17 题（11 KB）
-│   └── assets/                     # 原始 HTML（保留，不发布）
+│   │   ├── app.js                  # 主应用 · 路由 · 渲染
+│   │   ├── quiz-engine.js          # 答题引擎 · 乱序 · 状态
+│   │   └── scorer.js               # 评分逻辑（纯函数）
+│   └── data/
+│       ├── scrum.json              # 20 题
+│       ├── xp.json                 # 20 题
+│       ├── agile.json              # 17 题
+│       └── kanban.json             # 17 题
+└── docs/
+    ├── requirements.md             # 本文档
+    ├── design.md                   # 详细设计文档
+    └── assets/                     # 原始 HTML（保留）
 ```
 
 ---

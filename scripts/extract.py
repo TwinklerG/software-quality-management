@@ -6,10 +6,10 @@
     python scripts/extract.py
 
 输出:
-    docs/data/scrum.json
-    docs/data/xp.json
-    docs/data/agile.json
-    docs/data/kanban.json
+    src/data/scrum.json
+    src/data/xp.json
+    src/data/agile.json
+    src/data/kanban.json
 """
 
 import re
@@ -23,7 +23,7 @@ from pathlib import Path
 # ============================================================
 
 SOURCE_DIR = Path("docs/assets")
-OUTPUT_DIR = Path("docs/data")
+OUTPUT_DIR = Path("src/data")
 
 # 输入文件映射: {输出名: (文件名, 显示标题)}
 FILES = {

@@ -442,7 +442,7 @@ checkAnswerCorrect(userAnswer, correctAnswer, type):
 ### 8.1 `scripts/extract.py`
 
 **输入**: 问卷星报告 HTML（SingleFile 存档）  
-**输出**: 结构化 JSON（`docs/data/*.json`）
+**输出**: 结构化 JSON（`src/data/*.json`）
 
 #### 处理流程
 
@@ -512,7 +512,7 @@ checkAnswerCorrect(userAnswer, correctAnswer, type):
 步骤:
   1. checkout@v4          → 拉取代码
   2. configure-pages@v4   → 配置 Pages 环境
-  3. upload-pages-artifact@v3  → 上传 docs/ 为构建产物
+  3. upload-pages-artifact@v3  → 上传 src/ 为构建产物
   4. deploy-pages@v4      → 部署到 Pages
 
 权限: contents: read, pages: write, id-token: write
@@ -522,7 +522,7 @@ checkAnswerCorrect(userAnswer, correctAnswer, type):
 ### 9.2 静态文件处理
 
 - `.nojekyll` 文件阻止 GitHub Pages 的 Jekyll 处理
-- `docs/` 目录作为 Pages 根
+- `src/` 目录作为 Pages 部署源
 - 所有资源使用相对路径（`css/style.css`、`data/scrum.json`）
 
 ---
