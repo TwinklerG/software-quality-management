@@ -306,7 +306,7 @@ function renderQuizUI(engine, subj) {
     if (qData?.explanation) {
       const sourceHtml = qData?.source_url
         ? `<a href="${qData.source_url}" target="_blank" rel="noopener" class="source-link">📎 ${escapeHtml(qData.source || '参考来源')}</a>`
-        : (qData?.source ? `<span class="source-link" style="cursor:default;color:var(--text-muted);border:none">📎 ${escapeHtml(qData.source)}</span>` : '');
+        : (qData?.source ? `<span class="source-link">📎 ${escapeHtml(qData.source)}</span>` : '');
       const aiNotice = qData?.source && qData.source.includes('AI生成') 
         ? '<div class="ai-notice">内容由AI生成，仅供参考</div>' 
         : '';

@@ -442,11 +442,17 @@ p  { color: var(--text-secondary); line-height: 1.65; }
   font-size: 0.78rem;
   color: var(--accent);
   text-decoration: none;
+}
+.explanation-block a.source-link {
   border-bottom: 1px solid transparent;
   transition: border-color .15s;
 }
-.explanation-block .source-link:hover {
+.explanation-block a.source-link:hover {
   border-bottom-color: var(--accent);
+}
+.explanation-block span.source-link {
+  color: var(--text-muted);
+  cursor: default;
 }
 .explanation-block .ai-notice {
   font-size: 0.72rem;
