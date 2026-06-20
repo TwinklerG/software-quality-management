@@ -31,59 +31,33 @@ export function createQuizEngine(questions, opts = {}) {
   const shouldShuffle = opts.shuffle !== false;
   const seed = opts.seed ?? Date.now();
 
-  // 预处理：为每道题生成乱序后的选项映射
+  // 预处理：为每道题生成乱序后的选项（保留原始 key，标签随内容走）
   const processed = questions.map((q) => {
     const originalOptions = q.options || [];
-    let displayOptions;
-    let keyMap; // 原始 key → 显示 key 的映射（仅乱序时用）
 
     if (shouldShuffle && originalOptions.length > 0) {
-      // 用 seed + questionId 确保每题独立但可复现
       const qSeed = seed + q.id * 31;
-      const shuffled = seededShuffle(originalOptions, qSeed);
-      // 构建 key 映射，同时用 display key 覆盖选项的 key 属性
-      keyMap = {};
-      displayOptions = shuffled.map((opt, idx) => {
-        const displayKey = String.fromCharCode(65 + idx);
-        keyMap[opt.key] = displayKey;          // 原始 key → 显示 key
-        return { ...opt, key: displayKey };    // 覆写为显示 key
-      });
-    } else {
-      displayOptions = [...originalOptions];
-      keyMap = null;
+      const displayOptions = seededShuffle(originalOptions, qSeed);
+      return {
+        ...q,
+        _displayOptions: displayOptions,
+      };
     }
 
     return {
       ...q,
-      _displayOptions: displayOptions,   // 用于渲染的选项（可能乱序）
-      _keyMap: keyMap,                    // 原始 key → 显示 key
-      // 反向映射：显示 key → 原始 key（评分时用）
-      _reverseKeyMap: keyMap
-        ? Object.fromEntries(Object.entries(keyMap).map(([k, v]) => [v, k]))
-        : null,
+      _displayOptions: [...originalOptions],
     };
   });
 
   // ---- 状态 ----
   let _currentIndex = 0;
-  // 用户答案：{ [questionId]: answerInOriginalKeys }
+  // 用户答案：{ [questionId]: answerKey }  key 即选项标签（与原始一致）
   const _userAnswers = {};
   // 已锁定题目（已展示反馈）：Set<questionId>
   const _lockedQuestions = new Set();
 
   // ---- 内部工具 ----
-  function _toOriginalKey(questionId, displayKey) {
-    const q = processed.find((q) => q.id === questionId);
-    if (!q || !q._reverseKeyMap) return displayKey;
-    return q._reverseKeyMap[displayKey] || displayKey;
-  }
-
-  function _toDisplayKey(questionId, originalKey) {
-    const q = processed.find((q) => q.id === questionId);
-    if (!q || !q._keyMap) return originalKey;
-    return q._keyMap[originalKey] || originalKey;
-  }
-
   function _getQuestion(qId) {
     return processed.find((q) => q.id === qId);
   }
@@ -118,14 +92,13 @@ export function createQuizEngine(questions, opts = {}) {
       if (!q) return null;
 
       const userAnswer = _userAnswers[q.id];
-      // 转换为显示 key 用于 UI 高亮
-      let selectedDisplayKeys;
+      let selectedKeys;
       if (userAnswer === undefined || userAnswer === null) {
-        selectedDisplayKeys = null;
+        selectedKeys = null;
       } else if (Array.isArray(userAnswer)) {
-        selectedDisplayKeys = userAnswer.map((k) => _toDisplayKey(q.id, k));
+        selectedKeys = userAnswer;
       } else {
-        selectedDisplayKeys = [_toDisplayKey(q.id, userAnswer)];
+        selectedKeys = [userAnswer];
       }
 
       return {
@@ -133,7 +106,7 @@ export function createQuizEngine(questions, opts = {}) {
         stem: q.stem,
         type: q.type,
         options: q._displayOptions,
-        selectedKeys: selectedDisplayKeys,  // 显示 key 数组，用于 UI
+        selectedKeys,
         isAnswered: userAnswer !== undefined && userAnswer !== null,
         index: _currentIndex,
         total: processed.length,
@@ -182,19 +155,11 @@ export function createQuizEngine(questions, opts = {}) {
      * @param {number} questionId - 题目 ID
      * @param {string|string[]} displayKeys - 用户选择的显示 key（单选 "A" / 多选 ["A","C"]）
      */
-    selectAnswer(questionId, displayKeys) {
-      const q = _getQuestion(questionId);
-      if (!q) return;
-
-      if (Array.isArray(displayKeys)) {
-        // 多选题：转换为原始 key
-        const originalKeys = displayKeys.map((dk) => _toOriginalKey(questionId, dk));
-        _userAnswers[questionId] = originalKeys;
-      } else if (displayKeys === null || displayKeys === undefined) {
+    selectAnswer(questionId, keys) {
+      if (keys === null || keys === undefined) {
         delete _userAnswers[questionId];
       } else {
-        // 单选题：转换为原始 key
-        _userAnswers[questionId] = _toOriginalKey(questionId, displayKeys);
+        _userAnswers[questionId] = Array.isArray(keys) ? [...keys] : keys;
       }
     },
 

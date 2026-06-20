@@ -243,18 +243,9 @@ function renderQuizUI(engine, subj) {
   const isMulti = q.type === 'multiple';
   const inputType = isMulti ? 'checkbox' : 'radio';
 
-  // 获取正确答案（转换为显示 key，以便与渲染的选项 key 比较）
+  // 获取正确答案（key 即选项标签，与原始一致）
   const qData = engine.questions.find(t => t.id === q.id);
-  const correctAnswerOriginal = qData?.answer;
-  const keyMap = qData?._keyMap; // original → display
-
-  function toDisplayKeys(answer) {
-    if (!answer) return null;
-    if (!keyMap) return answer; // 未乱序，原样返回
-    if (Array.isArray(answer)) return answer.map(k => keyMap[k] || k);
-    return keyMap[answer] || answer;
-  }
-  const correctAnswerDisplay = toDisplayKeys(correctAnswerOriginal);
+  const correctAnswer = qData?.answer;
 
   const optionsHtml = q.options.map((opt) => {
     const isSelected = q.selectedKeys && q.selectedKeys.includes(opt.key);
@@ -262,10 +253,10 @@ function renderQuizUI(engine, subj) {
 
     if (locked) {
       cls += ' locked';
-      // 用显示 key 判断正确选项
-      const isCorrectOption = (isMulti && Array.isArray(correctAnswerDisplay))
-        ? correctAnswerDisplay.includes(opt.key)
-        : opt.key === correctAnswerDisplay;
+      // 判断正确选项（key 即选项标签，与原始一致）
+      const isCorrectOption = (isMulti && Array.isArray(correctAnswer))
+        ? correctAnswer.includes(opt.key)
+        : opt.key === correctAnswer;
 
       if (isSelected && isCorrectOption) {
         cls += ' correct-choice';
@@ -299,7 +290,7 @@ function renderQuizUI(engine, subj) {
     if (isCorrect) {
       feedbackHtml = '<div class="feedback-toast correct">回答正确</div>';
     } else {
-      const correctDisplay = formatAnswerDisplay(qData?.answer, qData?._keyMap);
+      const correctDisplay = formatAnswerDisplay(qData?.answer);
       feedbackHtml = `<div class="feedback-toast incorrect">回答错误，正确答案是 <b>${correctDisplay}</b></div>`;
     }
     // 答案解析
@@ -576,12 +567,9 @@ function checkAnswerCorrect(userAnswer, correctAnswer, type) {
  * @param {string|string[]} answer - 原始 key
  * @param {Object|null} keyMap - 原始 key → 显示 key 的映射表
  */
-function formatAnswerDisplay(answer, keyMap) {
+function formatAnswerDisplay(answer) {
   if (!answer) return '?';
-  if (Array.isArray(answer)) {
-    return answer.map(k => keyMap ? (keyMap[k] || k) : k).join(', ');
-  }
-  return keyMap ? (keyMap[answer] || answer) : String(answer);
+  return Array.isArray(answer) ? answer.join(', ') : String(answer);
 }
 
 /**
@@ -647,20 +635,12 @@ function renderResult(slug) {
     const statusCls = r.isCorrect ? 'correct' : 'incorrect';
     const statusText = r.isCorrect ? '正确' : (r.isAnswered ? '错误' : '未答');
 
-    // Find display keys for answers
+    // Find display keys for answers (key = original label, preserved after shuffle)
     const qData = data.questions.find(q => q.id === r.id);
-    const displayOpts = qData ? qData._displayOptions : r.options;
-    const keyMap = qData ? qData._keyMap : null;  // original → display
-
-    function getDisplayKey(origKey) {
-      if (!keyMap) return origKey;
-      return keyMap[origKey] || origKey;
-    }
 
     function formatAnswer(ans) {
       if (!ans) return '（未作答）';
-      if (Array.isArray(ans)) return ans.map(getDisplayKey).join(', ');
-      return getDisplayKey(String(ans));
+      return Array.isArray(ans) ? ans.join(', ') : String(ans);
     }
 
     return `
