@@ -196,7 +196,7 @@
       "answer": "A",
       "accuracy": 96.86,
       "explanation": "在结对编程中，**Driver（驾驶员）**的关注焦点是**当前这个方法的具体实现细节**：语法是否正确、边界条件是否处理、命名是否清晰、如何让测试通过。而 Navigator（领航员）关注更大的图景：还有什么测试没覆盖、整体方向是否正确、能否简化系统。两者分工互补。",
-      "source": "内容由AI生成，仅供参考。参考：Birgitta Böckeler & Nina Siessegger, \"On Pair Programming\", martinfowler.com",
+      "source": "参考：Birgitta Böckeler & Nina Siessegger, \"On Pair Programming\", martinfowler.com",
       "source_url": "https://martinfowler.com/articles/on-pair-programming.html"
     },
     {
@@ -252,7 +252,7 @@
       "answer": "C",
       "accuracy": 96.86,
       "explanation": "XP 的代码集体拥有制意味着任何开发者都可以改进代码的任何部分，但它并非「无规则」。它由**四条配套实践「拴住」**：自动化测试（保证修改安全）、结对编程（保证知识传递）、持续集成（保证及时发现问题）、编码标准（保证代码风格统一）。缺少任何一条，集体拥有制都会失控。",
-      "source": "内容由AI生成，仅供参考。参考：Martin Fowler, \"Code Ownership\", martinfowler.com",
+      "source": "参考：Martin Fowler, \"Code Ownership\", martinfowler.com",
       "source_url": "https://martinfowler.com/bliki/CodeOwnership.html"
     },
     {
@@ -336,7 +336,7 @@
       "answer": "C",
       "accuracy": 96.23,
       "explanation": "当主线构建损坏时，最高优先级是**恢复主线到绿色状态**，解除对其他团队成员的阻塞。首选措施是 `git revert` 出错的那次提交，将故障半径压缩到最小。在损坏的主线上继续提交会导致更多问题叠加。这是 CI 文化的核心纪律之一。",
-      "source": "内容由AI生成，仅供参考。参考：Martin Fowler, \"Continuous Integration\" — Keep the Build Fast",
+      "source": "参考：Martin Fowler, \"Continuous Integration\" — Keep the Build Fast",
       "source_url": "https://martinfowler.com/articles/continuousIntegration.html"
     },
     {
@@ -420,7 +420,7 @@
       "answer": "B",
       "accuracy": 96.86,
       "explanation": "没有自动化测试的 CI 是危险的——CI 跑得越欢，坏代码合入得越快。这被称为 **Fear Flywheel（恐惧飞轮）**：没有测试保护 → 不敢重构 → 代码腐化 → 变更成本上升 → 更不敢改代码 → 恶性循环。变更曲线不仅没有压平，反而悄悄回到指数形态。",
-      "source": "内容由AI生成，仅供参考。参考：Martin Fowler, \"Continuous Integration\"",
+      "source": "参考：Martin Fowler, \"Continuous Integration\"",
       "source_url": "https://martinfowler.com/articles/continuousIntegration.html"
     },
     {
@@ -476,7 +476,7 @@
       "answer": "B",
       "accuracy": 96.86,
       "explanation": "**简单设计不等于粗糙**。XP 的简单设计以两大支柱为基础：①重构能力——随时可以在测试保护下改善设计；②自动化测试套件——确保改动不会破坏已有功能。YAGNI（You Aren't Gonna Need It）要求「不提前构建不需要的东西」，而不是「不做设计」。原则是只做满足当前需求的最简设计，并通过持续重构保持其优良性。",
-      "source": "内容由AI生成，仅供参考。参考：Kent Beck, \"Simple Design\"; Martin Fowler, \"Yagni\"",
+      "source": "参考：Kent Beck, \"Simple Design\"; Martin Fowler, \"Yagni\"",
       "source_url": "https://martinfowler.com/bliki/Yagni.html"
     },
     {
@@ -504,7 +504,7 @@
       "answer": "C",
       "accuracy": 98.11,
       "explanation": "从 XP 视角看，**长期加班是计划/范围/设计/测试出了严重问题的征兆**。XP 提倡「可持续的步伐（Sustainable Pace）」——每周不超过 40 小时。疲劳的程序员更易写出 bug、跳过测试、引入回归。真正的解决方案是用计划游戏砍范围或调整优先级，而非简单堆砌加班时间。",
-      "source": "内容由AI生成，仅供参考。参考：Kent Beck, \"Extreme Programming Explained\"",
+      "source": "参考：Kent Beck, \"Extreme Programming Explained\"",
       "source_url": "https://www.agilealliance.org/glossary/sustainable-pace/"
     },
     {
@@ -532,7 +532,7 @@
       "answer": "B",
       "accuracy": 98.11,
       "explanation": "演进式设计（Evolutionary Design）的核心思想：**存疑时默认不上**。起步时用最简单的方案跑通最小闭环（如内存结构而非数据库），当真正的需求（如海量数据、复杂业务逻辑）到来时才引入相应的技术组件。这与 YAGNI 和简单设计一脉相承：不在不确定需要的时候提前构建扩展点。",
-      "source": "内容由AI生成，仅供参考。参考：Martin Fowler, \"Evolutionary Design\" & \"Yagni\"",
+      "source": "参考：Martin Fowler, \"Evolutionary Design\" & \"Yagni\"",
       "source_url": "https://martinfowler.com/bliki/EvolutionaryDesign.html"
     },
     {
@@ -560,7 +560,7 @@
       "answer": "C",
       "accuracy": 98.11,
       "explanation": "David Luhr（2024）提出的观点：在 AI 时代，TDD 的价值不是降低，而是**升华**。先写测试 = 把对业务的理解编码为可执行的规格。AI 不是自由发挥，而必须在人类定义的测试约束下生成实现。TDD 从「验证正确性」变为了「定义正确性的标准」。这使 TDD 在 AI 辅助开发中更加不可或缺。",
-      "source": "内容由AI生成，仅供参考。参考：David Luhr, \"TDD in the Age of AI\" (2024)",
+      "source": "参考：David Luhr, \"TDD in the Age of AI\" (2024)",
       "source_url": "https://davidluhr.com/blog/tdd-ai-era/"
     }
   ]

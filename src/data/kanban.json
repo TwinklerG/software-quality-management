@@ -252,7 +252,7 @@
       "answer": "B",
       "accuracy": 92.72,
       "explanation": "精益思想的演化顺序为：**福特流水线（1913）→ 丰田 TPS（1940s-50s）→ Poppendieck 精益软件开发（2003）**。亨利·福特首先发明了大规模流水线生产；丰田在其基础上加入「拉动」和「消除浪费」思想，发展出 TPS；Poppendieck 夫妇将精益原则从制造业翻译到软件领域。三者是递进演化关系。",
-      "source": "内容由AI生成，仅供参考。参考：Womack & Jones, \"Lean Thinking\"; Poppendieck, \"Lean Software Development\"",
+      "source": "参考：Womack & Jones, \"Lean Thinking\"; Poppendieck, \"Lean Software Development\"",
       "source_url": "https://www.leanessays.com/"
     },
     {
@@ -308,7 +308,7 @@
       "answer": "A",
       "accuracy": 94.7,
       "explanation": "Poppendieck 夫妇的核心贡献是做了**精益概念的同构映射（isomorphic mapping）**：把制造业的「库存（inventory）」翻译成软件的「在制品（WIP，如未合并的代码分支）」；把「过度生产」翻译成「额外功能（extra features）」；把「运输」翻译成「交接（hand-offs）」等。这种同构翻译使得丰田的精益原则能在软件领域落地。",
-      "source": "内容由AI生成，仅供参考。参考：Poppendieck, \"Lean Software Development\", 2003",
+      "source": "参考：Poppendieck, \"Lean Software Development\", 2003",
       "source_url": "https://www.leanessays.com/"
     },
     {
@@ -392,7 +392,7 @@
       "answer": "B",
       "accuracy": 100.0,
       "explanation": "CI 红灯代表流水线检测到了问题。用 `--no-verify` 跳过检查直接合并，**违反了内建质量（Build Quality In）的「停线权」**——在丰田 TPS 中称为 **Jidoka（自働化）**：任何人发现问题都有权「停止生产线」。红灯意味着「停下来修问题」，而不是「绕过问题继续」。",
-      "source": "内容由AI生成，仅供参考。参考：Toyota Production System — Jidoka; Lean Software Development",
+      "source": "参考：Toyota Production System — Jidoka; Lean Software Development",
       "source_url": "https://global.toyota/en/company/vision-and-philosophy/production-system/"
     },
     {
@@ -420,7 +420,7 @@
       "answer": "A",
       "accuracy": 99.34,
       "explanation": "Kanban 的核心原则之一是**限制在制品（Limit WIP）**。当瓶颈列出现堆积时，正确的做法是：**收紧 WIP 限制**（这里建议从默认调到约 4），停止往瓶颈前推工作，集中力量疏通瓶颈（如分析原因、补充资源、优化流程）。其他选项（绕开限制、拆给空闲工人、加班）都违反了「暴露瓶颈 → 解决瓶颈」的精益原则。",
-      "source": "内容由AI生成，仅供参考。参考：Kanban Method — Limit WIP practice",
+      "source": "参考：Kanban Method — Limit WIP practice",
       "source_url": "https://kanbanguides.org/"
     },
     {
@@ -448,7 +448,7 @@
       "answer": "C",
       "accuracy": 100.0,
       "explanation": "此题考察精益的全局优化原则：**局部最优 ≠ 全局最优（Sub-optimization）**。开发更快只会让下游测试队列积压更多，整体交付速度并不会变快——瓶颈仍然在测试环节。正确的做法是分析整个价值流，找到真正的瓶颈（约束理论中的约束点）并进行系统性优化。",
-      "source": "内容由AI生成，仅供参考。参考：Goldratt, \"The Goal\" (Theory of Constraints); Lean principles",
+      "source": "参考：Goldratt, \"The Goal\" (Theory of Constraints); Lean principles",
       "source_url": "https://kanbanguides.org/"
     },
     {
@@ -476,7 +476,7 @@
       "answer": "B",
       "accuracy": 98.68,
       "explanation": "只把看板当作「待办列表的电子化」但缺少 **WIP 限制、显式策略和反馈循环**，这只是看板的「形」而非「神」。Kanban Method 的核心不仅仅是可视化板，而是通过 WIP 限制暴露瓶颈、通过显式策略定义规则、通过反馈循环持续改进。缺少这些核心实践的工具只是任务追踪系统，称不上 Kanban 方法。",
-      "source": "内容由AI生成，仅供参考。参考：Kanban Method — Six Core Practices",
+      "source": "参考：Kanban Method — Six Core Practices",
       "source_url": "https://kanbanguides.org/"
     }
   ]

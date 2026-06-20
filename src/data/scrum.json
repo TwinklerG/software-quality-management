@@ -448,7 +448,7 @@
       "answer": "D",
       "accuracy": 98.58,
       "explanation": "此题考察 Scrum 的自管理原则。PO 每天给每位开发者分派具体任务并要求小时级汇报，违反了 Scrum 中「Scrum Team 是自管理（self-managing）的」原则。Scrum Guide 2020 明确：团队自己决定 'who does what, when, and how'。PO 负责 'what'（优先级），而非 'how'（实现方式）。形式上的 Scrum 仪式不等于真正践行 Scrum 精神。",
-      "source": "内容由AI生成，仅供参考。参考：Scrum Guide 2020 — Self-Managing",
+      "source": "参考：Scrum Guide 2020 — Self-Managing",
       "source_url": "https://scrumguides.org/scrum-guide.html"
     },
     {
@@ -476,7 +476,7 @@
       "answer": "C",
       "accuracy": 97.64,
       "explanation": "Velocity（速率）波动是正常的，因为 Story Point 是相对估算而非绝对工时。估算的本质价值不在于精确预测工期，而在于：①建立团队对故事的共同理解；②暴露分歧和需求模糊点；③为 Sprint 计划提供参考。PO 应关注波动背后的原因（需求模糊？阻碍因素？），而非追求虚假的估算精度。",
-      "source": "内容由AI生成，仅供参考。参考：Mike Cohn, \"Agile Estimating and Planning\"",
+      "source": "参考：Mike Cohn, \"Agile Estimating and Planning\"",
       "source_url": "https://www.mountaingoatsoftware.com/agile/estimating"
     },
     {
@@ -504,7 +504,7 @@
       "answer": "A",
       "accuracy": 99.06,
       "explanation": "此题考察 Scrum 的「透明」支柱与 AI 辅助开发的关系。Scrum 的透明性要求过程和工件对相关人员可见且可理解。AI 生成的代码如果不被团队理解，就产生了「理解力负债」——代码虽然存在但无人知其设计意图，这违反了透明的本质。应在 DoD 中追加对人类理解的要求，而非完全禁用 AI。",
-      "source": "内容由AI生成，仅供参考。参考：Scrum Guide 2020 — Transparency",
+      "source": "参考：Scrum Guide 2020 — Transparency",
       "source_url": "https://scrumguides.org/scrum-guide.html"
     },
     {
@@ -532,7 +532,7 @@
       "answer": "D",
       "accuracy": 98.11,
       "explanation": "Sprint Goal 是 Sprint 的核心承诺，不应被单方面更改。但 Scrum 也承认「范围/重要性/估算可协商，质量不可让步」的原则。如果 Sprint 过程中发现范围需要调整，应在不破坏 Sprint Goal 的前提下与 PO 协商。这体现了 Scrum 在「承诺」与「适应」之间的平衡。",
-      "source": "内容由AI生成，仅供参考。参考：Scrum Guide 2020 — Sprint Goal",
+      "source": "参考：Scrum Guide 2020 — Sprint Goal",
       "source_url": "https://scrumguides.org/scrum-guide.html#sprint-goal"
     },
     {
@@ -560,7 +560,7 @@
       "answer": "C",
       "accuracy": 99.06,
       "explanation": "Scrum 通过短迭代和经验主义来解决需求不确定性问题。用户真正的需求常在看到可工作软件后才清晰——这不是 Scrum 的失败，而是其设计的出发点。Sprint Review 演示「完成」不等于价值传递成功，关键在于下一 Sprint 基于真实反馈调整 Backlog。这正是「检视与适应」（Inspect & Adapt）循环的价值。",
-      "source": "内容由AI生成，仅供参考。参考：Scrum Guide 2020 — Sprint Review",
+      "source": "参考：Scrum Guide 2020 — Sprint Review",
       "source_url": "https://scrumguides.org/scrum-guide.html#sprint-review"
     }
   ]

@@ -304,12 +304,15 @@ function renderQuizUI(engine, subj) {
     }
     // 答案解析
     if (qData?.explanation) {
-      const sourceHtml = qData?.source_url
-        ? `<a href="${qData.source_url}" target="_blank" rel="noopener" class="source-link">📎 ${escapeHtml(qData.source || '参考来源')}</a>`
-        : (qData?.source ? `<span class="source-link">📎 ${escapeHtml(qData.source)}</span>` : '');
-      const aiNotice = qData?.source && qData.source.includes('AI生成') 
-        ? '<div class="ai-notice">内容由AI生成，仅供参考</div>' 
-        : '';
+      let sourceHtml;
+      if (qData?.source_url) {
+        sourceHtml = `<a href="${qData.source_url}" target="_blank" rel="noopener" class="source-link">📎 ${escapeHtml(qData.source || '参考来源')}</a>`;
+      } else if (qData?.source) {
+        sourceHtml = `<span class="source-link">📎 ${escapeHtml(qData.source)}</span>`;
+      } else {
+        sourceHtml = '';
+      }
+      const aiNotice = !qData?.source_url ? '<div class="ai-notice">内容由AI生成，仅供参考</div>' : '';
       explanationHtml = `
         <div class="explanation-block">
           <div class="exp-label">解析</div>
@@ -584,12 +587,15 @@ function formatAnswerDisplay(answer, keyMap) {
  */
 function buildExplanationHtml(qData) {
   if (!qData?.explanation) return '';
-  const sourceHtml = qData?.source_url
-    ? `<a href="${qData.source_url}" target="_blank" rel="noopener" class="source-link">📎 ${escapeHtml(qData.source || '参考来源')}</a>`
-    : (qData?.source ? `<span class="source-link" style="cursor:default;color:var(--text-muted);border:none">📎 ${escapeHtml(qData.source)}</span>` : '');
-  const aiNotice = qData?.source && qData.source.includes('AI生成')
-    ? '<div class="ai-notice">内容由AI生成，仅供参考</div>'
-    : '';
+  let sourceHtml;
+  if (qData?.source_url) {
+    sourceHtml = `<a href="${qData.source_url}" target="_blank" rel="noopener" class="source-link">📎 ${escapeHtml(qData.source || '参考来源')}</a>`;
+  } else if (qData?.source) {
+    sourceHtml = `<span class="source-link">📎 ${escapeHtml(qData.source)}</span>`;
+  } else {
+    sourceHtml = '';
+  }
+  const aiNotice = !qData?.source_url ? '<div class="ai-notice">内容由AI生成，仅供参考</div>' : '';
   return `
     <div class="explanation-block">
       <div class="exp-label">解析</div>
