@@ -458,18 +458,20 @@ function bindQuizEvents(engine, subj) {
 
   function handleNextOrConfirm() {
     const cur = engine.getCurrentQuestion();
-    // 多选题未锁定 → 锁定并展示反馈，然后跳转
+    // 多选题未锁定 → 锁定并展示反馈
     if (cur && cur.type === 'multiple' && !engine.isLocked(cur.id)) {
       engine.lockQuestion(cur.id);
       renderQuizUI(engine, subj);
-      setTimeout(() => {
-        if (engine.hasNext()) {
+      // 答对才自动跳转，答错停在原地
+      const qData = engine.questions.find(t => t.id === cur.id);
+      const userAns = engine.getUserAnswers()[cur.id];
+      const isCorrect = checkAnswerCorrect(userAns, qData?.answer, qData?.type);
+      if (isCorrect && engine.hasNext()) {
+        setTimeout(() => {
           engine.next();
           renderQuizUI(engine, subj);
-        } else {
-          renderQuizUI(engine, subj);
-        }
-      }, 1000);
+        }, 1000);
+      }
       return;
     }
     // 单选题未锁定 → 不允许跳过（必须选择）
