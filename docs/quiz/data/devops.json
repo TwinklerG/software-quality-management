@@ -1,0 +1,1680 @@
+{
+  "subject": "devops",
+  "title": "DevOps导论 期末考试 客观题部分",
+  "totalQuestions": 60,
+  "questions": [
+    {
+      "id": 1,
+      "type": "single",
+      "stem": "\"Measure twice, Cut once\" 是哪个阶段的典型开发特征？",
+      "options": [
+        {
+          "key": "A",
+          "text": "软件作坊阶段"
+        },
+        {
+          "key": "B",
+          "text": "软件成为独立产品阶段"
+        },
+        {
+          "key": "C",
+          "text": "网络化阶段"
+        },
+        {
+          "key": "D",
+          "text": "软硬件一体化阶段"
+        }
+      ],
+      "answer": "D",
+      "accuracy": null,
+      "explanation": "「Measure twice, Cut once」（量两次，锯一次）是制造业中的经典格言，强调在动手之前充分规划和验证。在软件发展史中，这对应最早期「软硬件一体化」阶段——软件作为硬件的附属，修改成本极高，因而必须在编码前做充分的设计和规格确认。IBM System/360 是这一阶段的典型代表。",
+      "source": "参考：软件工程历史概述及 IBM System/360 项目",
+      "source_url": ""
+    },
+    {
+      "id": 2,
+      "type": "single",
+      "stem": "关于软件过程管理，以下哪一种说法是比较贴切的：",
+      "options": [
+        {
+          "key": "A",
+          "text": "进入互联网时代，软件过程管理是过于老套的话题。"
+        },
+        {
+          "key": "B",
+          "text": "软件过程管理是软件企业发展到较高层次才需要关心的话题。"
+        },
+        {
+          "key": "C",
+          "text": "软件过程管理关注的是企业软件过程能力的稳定输出和提升。"
+        },
+        {
+          "key": "D",
+          "text": "软件过程管理主要关注软件成本和质量目标的达成。"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "软件过程管理的核心关注点是「企业软件过程能力的稳定输出和提升」，这个表述准确捕捉了 CMM/CMMI 和过程改进运动的本质——不是关注单次项目的成败，而是组织级的长期能力建设。选项 D 偏窄（仅关注成本和质量），A 和 B 过度轻视了过程管理的价值。",
+      "source": "参考：Watts Humphrey, \"Managing the Software Process\"",
+      "source_url": "https://www.sei.cmu.edu/publications/books/managing-the-software-process/"
+    },
+    {
+      "id": 3,
+      "type": "single",
+      "stem": "软件开发的本质难题中哪一个与软件发展阶段没有直接关系？",
+      "options": [
+        {
+          "key": "A",
+          "text": "复杂性"
+        },
+        {
+          "key": "B",
+          "text": "可变性"
+        },
+        {
+          "key": "C",
+          "text": "一致性"
+        },
+        {
+          "key": "D",
+          "text": "不可见性"
+        }
+      ],
+      "answer": "D",
+      "accuracy": null,
+      "explanation": "软件开发的本质难题中，复杂性、可变性、一致性都是固有且随软件不同发展阶段表现各异的问题。而「不可见性（Invisibility）」是软件的根本特征——软件本身没有物理形态，本质上不可见——这与处于哪个发展阶段没有直接关系，而是软件与生俱来的特性。",
+      "source": "参考：Fred Brooks, \"No Silver Bullet\"",
+      "source_url": "https://en.wikipedia.org/wiki/No_Silver_Bullet"
+    },
+    {
+      "id": 4,
+      "type": "single",
+      "stem": "\"Code and Fix\" 是软件发展哪个阶段的典型开发特征？",
+      "options": [
+        {
+          "key": "A",
+          "text": "网络化和服务化"
+        },
+        {
+          "key": "B",
+          "text": "软件作为独立产品"
+        },
+        {
+          "key": "C",
+          "text": "互联网时代"
+        },
+        {
+          "key": "D",
+          "text": "软硬件一体化"
+        }
+      ],
+      "answer": "D",
+      "accuracy": null,
+      "explanation": "「Code and Fix」（边写边改）是最原始的开发方式——没有正式的开发流程和规范，编码和调试交替进行。这种模式在软件依附于硬件的「软硬件一体化」阶段最为典型，因为当时软件规模小、需求简单，且软件本身不单独销售。",
+      "source": "参考：软件工程发展史中关于开发模式演进的论述",
+      "source_url": ""
+    },
+    {
+      "id": 5,
+      "type": "single",
+      "stem": "以下哪个因素促成了软件成为独立的产品？",
+      "options": [
+        {
+          "key": "A",
+          "text": "互联网的出现"
+        },
+        {
+          "key": "B",
+          "text": "个人电脑的出现"
+        },
+        {
+          "key": "C",
+          "text": "高级程序设计语言的出现"
+        },
+        {
+          "key": "D",
+          "text": "操作系统的出现"
+        }
+      ],
+      "answer": "D",
+      "accuracy": null,
+      "explanation": "操作系统的出现是软件独立为产品的关键推动力。在操作系统出现之前，应用程序必须直接管理硬件资源，软件与特定硬件深度绑定。操作系统提供了标准化的硬件抽象层（通过系统调用），使得同一软件可以运行在不同硬件上，软件因此才可能作为独立产品销售。这一转折发生在 1960 年代 IBM System/360 及 OS/360 时期。",
+      "source": "参考：IBM System/360 历史及操作系统发展",
+      "source_url": "https://en.wikipedia.org/wiki/IBM_System/360"
+    },
+    {
+      "id": 6,
+      "type": "single",
+      "stem": "软件危机和软件工程这两个概念提出时间是？",
+      "options": [
+        {
+          "key": "A",
+          "text": "上世纪八十年代"
+        },
+        {
+          "key": "B",
+          "text": "上世纪五十年代"
+        },
+        {
+          "key": "C",
+          "text": "上世纪七十年代"
+        },
+        {
+          "key": "D",
+          "text": "上世纪六十年代"
+        }
+      ],
+      "answer": "D",
+      "accuracy": null,
+      "explanation": "「软件危机」(Software Crisis)和「软件工程」(Software Engineering)这两个术语均出现于 1968 年 NATO 软件工程会议。但概念的酝酿和问题的暴露始于 1960 年代中期——随着第三代计算机的普及，软件规模和复杂度急剧增长，导致大量项目超支、延期甚至失败。",
+      "source": "NATO Software Engineering Conference 1968/1969 — Report",
+      "source_url": "https://en.wikipedia.org/wiki/NATO_Software_Engineering_Conference"
+    },
+    {
+      "id": 7,
+      "type": "multiple",
+      "stem": "关于形式化方法的描述当中，不正确的有哪些？",
+      "options": [
+        {
+          "key": "A",
+          "text": "这种方法应用范围有限，例如：不适合跟客户讨论需求。"
+        },
+        {
+          "key": "B",
+          "text": "这种方法是网络化和服务化阶段用来应对软件开发本质四大难题而提出来的"
+        },
+        {
+          "key": "C",
+          "text": "这种方法对开发人员技能有较高的要求"
+        },
+        {
+          "key": "D",
+          "text": "这种方法的主要目的是解决软件开发的效率问题"
+        }
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "题目要求选「不正确」的选项。选中项是两条不正确的说法：①「形式化方法是网络化和服务化阶段才提出的」——这是错误的，因为形式化方法早在 1970-80 年代就已存在（如 VDM、Z、B 方法等），远早于网络化时代。②「形式化方法的主要目的是解决软件开发的效率问题」——这也是错误的，它的主要目的是解决正确性和可靠性问题。未选中的两条是正确的：形式化方法确实应用范围有限，且对开发人员技能有较高要求。",
+      "source": "参考：Formal Methods 概述 (Wikipedia)",
+      "source_url": "https://en.wikipedia.org/wiki/Formal_methods"
+    },
+    {
+      "id": 8,
+      "type": "multiple",
+      "stem": "关于迭代式方法的说法哪些是比较恰当的？",
+      "options": [
+        {
+          "key": "A",
+          "text": "迭代式方法是上世纪九十年代中后期才出现的一种方法"
+        },
+        {
+          "key": "B",
+          "text": "迭代式方法是指一类具有类似特征的方法"
+        },
+        {
+          "key": "C",
+          "text": "迭代式方法主要特征在于将软件开发过程视作一个逐步学习和交流的过程"
+        },
+        {
+          "key": "D",
+          "text": "迭代式方法主要是为了解决软件开发的质量问题"
+        }
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "accuracy": null,
+      "explanation": "题目要求选「比较恰当」的说法。选中项是两条恰当的描述：①「迭代式方法是指一类具有类似特征的方法」——这准确描述了迭代式方法的本质是一个方法论族，而非单一方法。②「迭代式方法主要特征在于将软件开发过程视作一个逐步学习和交流的过程」——这抓住了迭代的核心：通过增量交付获得反馈，在反馈中学习和调整。未选中的两条不恰当：迭代式方法远早于 1990 年代就已存在，且它的主要目标不仅是解决质量问题。",
+      "source": "参考：Craig Larman, \"Agile & Iterative Development: A Manager's Guide\"",
+      "source_url": "https://www.agilealliance.org/glossary/iterative-development/"
+    },
+    {
+      "id": 9,
+      "type": "multiple",
+      "stem": "DevOps方法的出现具有一定的必然性，与以下哪些软件应用特征相匹配？",
+      "options": [
+        {
+          "key": "A",
+          "text": "软件系统部署环境越来越错综复杂"
+        },
+        {
+          "key": "B",
+          "text": "用户需求多变所带来了软件系统的快速演化的要求"
+        },
+        {
+          "key": "C",
+          "text": "软件在社会生活当中扮演了越来越关键的角色"
+        },
+        {
+          "key": "D",
+          "text": "软件定义世界，软件随处可见"
+        }
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "DevOps 的出现与四个特征均高度相关：(A) 部署环境复杂化——现代系统涉及云、容器、多环境；(B) 需求快速演化——敏捷和精益要求快速交付和反馈；(C) 软件在社会中的关键角色——对可靠性和速度的要求提升；(D) 软件无处不在——软件定义世界的趋势。这四者共同构成了 DevOps 的「必然性」背景。",
+      "source": "参考：Gene Kim 等, \"The DevOps Handbook\"",
+      "source_url": "https://itrevolution.com/product/the-devops-handbook-second-edition/"
+    },
+    {
+      "id": 10,
+      "type": "multiple",
+      "stem": "DevOps的哪些特点可以有效支撑当前社会对软件系统的期望？",
+      "options": [
+        {
+          "key": "A",
+          "text": "微服务架构设计"
+        },
+        {
+          "key": "B",
+          "text": "工具链支持高效率的自动化"
+        },
+        {
+          "key": "C",
+          "text": "虚拟机技术的大量应用"
+        },
+        {
+          "key": "D",
+          "text": "敏捷开发、精益思想以及看板方法，支持快速开发、交付、迭代和演化"
+        }
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "DevOps 通过多种技术实践支撑现代软件系统的期望：微服务架构设计支持独立部署和扩展；工具链自动化（CI/CD）提高交付效率；虚拟机/容器技术提供环境一致性和资源弹性；敏捷和精益思想保证快速迭代和价值交付。这四个选项共同描述了 DevOps 的技术支撑体系。",
+      "source": "参考：Gene Kim 等, \"The DevOps Handbook\"",
+      "source_url": "https://itrevolution.com/product/the-devops-handbook-second-edition/"
+    },
+    {
+      "id": 11,
+      "type": "single",
+      "stem": "DevOps中的XaaS特指 SaaS、PaaS以及IaaS这三种。",
+      "options": [
+        {
+          "key": "A",
+          "text": "正确"
+        },
+        {
+          "key": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "XaaS（Everything as a Service / Anything as a Service）是一个统称，泛指一切以「即服务」模式提供的产品。它不仅包括 SaaS、PaaS、IaaS，还包括 DaaS（数据即服务）、FaaS（函数即服务）、BaaS（后端即服务）等数十种细分类型。因此说 XaaS「特指」这三种是不准确的。",
+      "source": "参考：什么是 XaaS (Wikipedia / Gartner)",
+      "source_url": "https://en.wikipedia.org/wiki/Everything_as_a_service"
+    },
+    {
+      "id": 12,
+      "type": "single",
+      "stem": "下述各个度量项中，哪一个不是PSP的基本度量项？",
+      "options": [
+        {
+          "key": "A",
+          "text": "时间"
+        },
+        {
+          "key": "B",
+          "text": "缺陷"
+        },
+        {
+          "key": "C",
+          "text": "风险"
+        },
+        {
+          "key": "D",
+          "text": "规模"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "PSP 的三个基本度量项是：时间（Time）、缺陷（Defect）、规模（Size）。Watts Humphrey 提出：「软件开发的三个主要过程度量是时间、规模和缺陷。如果能精确度量这三者，其他大多数重要度量都可以从中导出。」「风险」不是 PSP 的基本度量项——它属于更高级的管理层面。",
+      "source": "Watts Humphrey, \"A Discipline for Software Engineering\" (PSP: A Self-Improvement Process for Software Engineers)",
+      "source_url": "https://www.sei.cmu.edu/publications/books/a-discipline-for-software-engineering/"
+    },
+    {
+      "id": 13,
+      "type": "multiple",
+      "stem": "关于面向用户的质量观，我们应该关注如下哪些问题：",
+      "options": [
+        {
+          "key": "A",
+          "text": "用户期望是否有优先级？"
+        },
+        {
+          "key": "B",
+          "text": "用户期望的优先级对软件开发的影响？"
+        },
+        {
+          "key": "C",
+          "text": "界面和可操作性是首要的，因为这是用户能直接感受到的。"
+        },
+        {
+          "key": "D",
+          "text": "真实用户是谁？"
+        }
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "面向用户的质量观关注的是用户的真实期望。选中项是三个正确关注点：①真实用户是谁——这是首要问题，不同用户有不同的质量期望；②用户期望是否有优先级——因为不是所有期望都同等重要；③用户期望的优先级对软件开发的影响——决定了开发资源的分配。未选中的一条不正确：界面和可操作性是用户直接感知的，但并非「首要」——用户更关心功能是否满足实际需求。",
+      "source": "参考：PSP/TSP 质量管理材料中关于面向用户质量观的论述",
+      "source_url": ""
+    },
+    {
+      "id": 14,
+      "type": "multiple",
+      "stem": "PSP当中为什么用缺陷管理替代质量管理？下述说法中正确的是：",
+      "options": [
+        {
+          "key": "A",
+          "text": "因为缺陷管理相关的活动（例如，测试等）本来就是软件开发中必须要开展的活动。"
+        },
+        {
+          "key": "B",
+          "text": "因为缺陷往往对应了面向用户质量观中的首要用户期望。"
+        },
+        {
+          "key": "C",
+          "text": "因为缺陷管理和质量管理其实是一回事。"
+        },
+        {
+          "key": "D",
+          "text": "因为单纯质量管理很难操作。"
+        }
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "PSP 用缺陷管理替代质量管理是因为：①「缺陷往往对应了面向用户质量观中的首要用户期望」——用户首先关心软件是否正常工作，缺陷直接反映软件是否满足功能需求。②「单纯质量管理很难操作」——「质量」是一个模糊的、多维度的概念，难以直接度量；而缺陷是具体的、可计数的，可以作为质量的代理指标。未选中的两条不正确：缺陷管理相关活动是必须开展的但这不等于它就是质量管理；缺陷管理和质量管理并非一回事。",
+      "source": "参考：Watts Humphrey, PSP 教材",
+      "source_url": "https://www.sei.cmu.edu/publications/books/a-discipline-for-software-engineering/"
+    },
+    {
+      "id": 15,
+      "type": "multiple",
+      "stem": "关于PROBE估算法，下述各种说法中，不正确的有哪些？",
+      "options": [
+        {
+          "key": "A",
+          "text": "PROBE估算结果带着小数，肯定不准确，因而， 不应该在项目估算的时候使用。"
+        },
+        {
+          "key": "B",
+          "text": "PROBE方法不能用来估算质量。"
+        },
+        {
+          "key": "C",
+          "text": "PROBE不能给出精确估算，因而适合用来跟用户讨论需求和规模。"
+        },
+        {
+          "key": "D",
+          "text": "PROBE方法不需要历史数据。"
+        }
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "题目要求选「不正确」的说法。选中项是三条不正确的说法：①「PROBE 估算结果带着小数，肯定不准确」——统计方法产生小数是正常特征，不代表不准确。②「PROBE 不能给出精确估算，因而适合用来跟用户讨论需求和规模」——PROBE 恰是基于历史数据的估算方法，用于项目内部计划，不是与用户讨论需求的工具。③「PROBE 方法不需要历史数据」——PROBE 的核心前提就是需要历史数据来建立估算基准。未选中的一条正确：PROBE 方法不能用来估算质量。",
+      "source": "参考：Watts Humphrey, PSP 教材 PROBE 方法",
+      "source_url": "https://www.sei.cmu.edu/publications/books/a-discipline-for-software-engineering/"
+    },
+    {
+      "id": 16,
+      "type": "multiple",
+      "stem": "关于质量路径（Quality Journey），下列说法中哪些不恰当。",
+      "options": [
+        {
+          "key": "A",
+          "text": "质量路径中所列举的方法都是提升开发质量的有效手段，可以随意选择使用。"
+        },
+        {
+          "key": "B",
+          "text": "进入测试之前的高质量，是获得测试之后高质量软件系统的前提条件。"
+        },
+        {
+          "key": "C",
+          "text": "高质量软件产品最终还是需要依赖测试来确保。v"
+        },
+        {
+          "key": "D",
+          "text": "质量路径与个体软件工程师无关，是团队层面的集体努力。"
+        }
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "题目要求选「不恰当」的说法。选中项是两条不恰当的说法：①「质量路径中所列举的方法可以随意选择使用」——不恰当，因为这些方法有严格的依赖关系和适用条件，PSP 必须先于 TSP，个人度量先于团队度量。②「质量路径与个体软件工程师无关，是团队层面的集体努力」——不恰当，因为质量路径恰恰始于个体软件工程师的自我管理和度量（PSP），再逐步扩展到团队（TSP）。未选中的两条恰当：进入测试前的高质量是前提；最终仍需依赖测试来确保质量。",
+      "source": "参考：SEI TSP/PSP 材料",
+      "source_url": "https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=5283"
+    },
+    {
+      "id": 17,
+      "type": "multiple",
+      "stem": "关于评审检查表，下述说法中不恰当的是：",
+      "options": [
+        {
+          "key": "A",
+          "text": "项目团队所有人应该共用一份评审检查表，体现统一性"
+        },
+        {
+          "key": "B",
+          "text": "评审检查表应该保持稳定，确保缺陷不会被遗漏"
+        },
+        {
+          "key": "C",
+          "text": "评审检查表应该定期更新"
+        },
+        {
+          "key": "D",
+          "text": "评审检查表应该是个性化的"
+        }
+      ],
+      "answer": [
+        "A",
+        "B"
+      ],
+      "accuracy": null,
+      "explanation": "题目要求选「不恰当」的说法。选中项是两条不恰当的说法：①「项目团队所有人应该共用一份评审检查表，体现统一性」——不恰当，不同角色、不同模块、不同类型的缺陷需要不同的检查视角，个性化检查表更有针对性。②「评审检查表应该保持稳定，确保缺陷不会被遗漏」——不恰当，检查表应该定期更新以反映团队积累的经验和常见缺陷模式。未选中的两条恰当：检查表应定期更新、应是个性化的。",
+      "source": "参考：PSP 评审检查表实践",
+      "source_url": "https://www.sei.cmu.edu/publications/books/a-discipline-for-software-engineering/"
+    },
+    {
+      "id": 18,
+      "type": "multiple",
+      "stem": "关于PQI，下述说法中不恰当的是：",
+      "options": [
+        {
+          "key": "A",
+          "text": "PQI越高越好，最好达到1.0"
+        },
+        {
+          "key": "B",
+          "text": "PQI可以用来辅助判断模块开发的质量"
+        },
+        {
+          "key": "C",
+          "text": "PQI五个分指标都可以超过1.0，比如，设计时间多于编码时间的时候，该分指标就超过1.0了"
+        },
+        {
+          "key": "D",
+          "text": "PQI可以为过程改进提供依据"
+        }
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "accuracy": null,
+      "explanation": "题目要求选「不恰当」的说法。选中项是两条不恰当的说法：①「PQI 越高越好，最好达到 1.0」——不恰当，PQI 达到 1.0 意味着各指标在理想范围，但超过 1.0 不代表「更好」，需要具体分析。②「PQI 五个分指标都可以超过 1.0」——不恰当，各分指标有各自的计量方式，并非都能超过 1.0。未选中的两条恰当：PQI 可辅助判断模块质量、可为过程改进提供依据。",
+      "source": "参考：PSP 教材中 PQI 指标说明",
+      "source_url": "https://www.sei.cmu.edu/publications/books/a-discipline-for-software-engineering/"
+    },
+    {
+      "id": 19,
+      "type": "multiple",
+      "stem": "关于评审，下述说法中不恰当是：",
+      "options": [
+        {
+          "key": "A",
+          "text": "代码的个人评审也应该通过评审检查表来进行。"
+        },
+        {
+          "key": "B",
+          "text": "代码的个人评审最好交叉进行，因为阅读自己代码容易产生思维定式，不利于缺陷发现。"
+        },
+        {
+          "key": "C",
+          "text": "代码的个人评审应该安排在单元测试之后，确保评审对象有着较高的质量，提升评审价值。"
+        },
+        {
+          "key": "D",
+          "text": "如果安排了代码的小组评审，那么代码个人评审就可以不用做。"
+        }
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "accuracy": null,
+      "explanation": "题目要求选「不恰当」的说法。选中项是两条不恰当的说法：①「代码的个人评审最好交叉进行」——不恰当，个人评审是阅读自己的代码，针对自身常犯错误进行自查，交叉评审是小组评审的做法。②「代码的个人评审应该安排在单元测试之后」——不恰当，个人评审应在单元测试之前进行，先评审再测试，及早发现缺陷，降低修复成本。未选中的两条恰当：个人评审应通过检查表来进行；如果已安排小组评审，个人评审依然需要做。",
+      "source": "参考：PSP 个人评审实践",
+      "source_url": "https://www.sei.cmu.edu/publications/books/a-discipline-for-software-engineering/"
+    },
+    {
+      "id": 20,
+      "type": "single",
+      "stem": "根据敏捷宣言，以下哪项描述了更多的价值？",
+      "options": [
+        {
+          "key": "A",
+          "text": "个体和交互、可工作的软件、客户协作、响应变化"
+        },
+        {
+          "key": "B",
+          "text": "响应变化、个体和交互、流程和工作、客户协作"
+        },
+        {
+          "key": "C",
+          "text": "可工作的软件、个体交互、响应变化、相近的文档"
+        },
+        {
+          "key": "D",
+          "text": "客户协作、遵循计划、可工作的软件、个体交互"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "敏捷宣言的四条价值观（按优先级）为：个体和交互高于流程和工具、可工作的软件高于详尽的文档、客户协作高于合同谈判、响应变化高于遵循计划。选项 A 完整列出这四个左项，是正确描述。其他选项混淆了左右项或混入了非宣言内容。",
+      "source": "Agile Manifesto",
+      "source_url": "https://agilemanifesto.org/"
+    },
+    {
+      "id": 21,
+      "type": "single",
+      "stem": "下列哪一项更好地描述了敏捷宣言？",
+      "options": [
+        {
+          "key": "A",
+          "text": "它包含了许多敏捷团队使用的实践"
+        },
+        {
+          "key": "B",
+          "text": "它概述了构建软件的最有效方法"
+        },
+        {
+          "key": "C",
+          "text": "它包含了建立敏捷思维方式的价值观"
+        },
+        {
+          "key": "D",
+          "text": "它定义了构建软件的规则"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "敏捷宣言本质上是一组价值观声明，目的是建立敏捷思维方式的哲学基础。它不是具体的实践指南（A 错），没有定义「最有效的方法」（B 错），也不是规则手册（D 错）。它体现了「是什么比怎么做更重要」——价值观引领实践，而非反过来。",
+      "source": "Agile Manifesto & History",
+      "source_url": "https://agilemanifesto.org/"
+    },
+    {
+      "id": 22,
+      "type": "single",
+      "stem": "你是一个软件团队的开发人员。 一个用户向你的团队询问有关构建新功能的信息，并以规范的形式提供了需求。 她非常确定这个功能要如何工作，并承诺不会有任何变化。 哪种敏捷价值最适用于这种情况？",
+      "options": [
+        {
+          "key": "A",
+          "text": "工作的软件 高于 详尽的文档"
+        },
+        {
+          "key": "B",
+          "text": "个体和互动 高于 流程和工具"
+        },
+        {
+          "key": "C",
+          "text": "客户合作 高于 合同谈判"
+        },
+        {
+          "key": "D",
+          "text": "响应变化 高于 遵循计划"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "题中用户提供了详尽的需求规范且承诺不会有变化。这种情况下，关键问题不是应对变化（D）、不是合同谈判（C）、也不是团队互动流程（B），而是「如何将规范转化为可工作的软件」。这正是「可工作的软件高于详尽的文档」这条价值观的应用场景——即使有详尽的规范文档，最终衡量标准仍是交付可工作的软件。",
+      "source": "参考：Agile Manifesto",
+      "source_url": "https://agilemanifesto.org/"
+    },
+    {
+      "id": 23,
+      "type": "single",
+      "stem": "Sean是一个正在构建财务软件的团队的开发人员。 他的团队被要求开发一个新的交易系统。 他和他的团队召开会议来提出他们正在使用的工作流的图景。 然后，他们将流程放在白板上，流程中的每个步骤都有一列。 经过对团队在白板上的工作项目进行了几周观察，他们注意到这个过程中有几个步骤似乎过载了。对于他们来说，下一步应该做什么？",
+      "options": [
+        {
+          "key": "A",
+          "text": "与团队合作，在工作进展缓慢的阶段更好地完成工作"
+        },
+        {
+          "key": "B",
+          "text": "专注于完成看板上的工作"
+        },
+        {
+          "key": "C",
+          "text": "对过载步骤中正在进行的工作项目的数量进行限制"
+        },
+        {
+          "key": "D",
+          "text": "在较慢的步骤中使用更多的人力"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "题目描述的场景是典型的看板实施：团队可视化了工作流（白板）、观察了几周后发现某些步骤过载。根据看板方法，下一步应该是限制在制品（WIP）——对过载步骤中正在进行的工作项数量设置上限。这是看板的核心实践之一：通过限制 WIP 来暴露瓶颈、平衡流动，而不是简单地加人（会引入更多沟通成本）或仅仅「更好地完成工作」（太模糊）。",
+      "source": "Kanban Guides — Limit WIP",
+      "source_url": "https://kanbanguides.org/"
+    },
+    {
+      "id": 24,
+      "type": "single",
+      "stem": "下列哪一个不是精益原则？",
+      "options": [
+        {
+          "key": "A",
+          "text": "实施反馈循环"
+        },
+        {
+          "key": "B",
+          "text": "消除浪费"
+        },
+        {
+          "key": "C",
+          "text": "尽可能晚的做决定"
+        },
+        {
+          "key": "D",
+          "text": "识别所有的步骤"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "精益原则包括：消除浪费、内建质量、创造知识、推迟决策（尽可能晚做决定）、快速交付、尊重人、优化全局。A「实施反馈循环」不在这七个精益原则之中——反馈循环是看板方法和敏捷实践的核心，而非波彭迪克夫妇提出的七个精益原则本身。",
+      "source": "Mary & Tom Poppendieck, \"Lean Software Development\", 2003",
+      "source_url": "https://www.leanessays.com/"
+    },
+    {
+      "id": 25,
+      "type": "single",
+      "stem": "下列哪一个更好地描述了如何使用看板？",
+      "options": [
+        {
+          "key": "A",
+          "text": "帮助团队自我组织，并了解工作流程中的瓶颈所在"
+        },
+        {
+          "key": "B",
+          "text": "观察特征如何流经过程，以便团队可以确定如何限制WIP并通过工作流程中的步骤确定最均匀的工作流程"
+        },
+        {
+          "key": "C",
+          "text": "跟踪WIP限制和当前任务状态，以便团队知道他们还有多少工作要做"
+        },
+        {
+          "key": "D",
+          "text": "跟踪缺陷和问题，并创建解决产品问题的最快途径"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "看板的核心使用方式是：观察工作项如何在流程中流动，通过数据来分析和优化 WIP 限制，使工作流程尽可能均匀和平滑。这不仅仅是跟踪状态或缺陷，而是「观察、度量、优化」的持续改进循环。选项 B 最完整地描述了这一核心思想。",
+      "source": "Kanban Method — Manage Flow",
+      "source_url": "https://kanbanguides.org/"
+    },
+    {
+      "id": 26,
+      "type": "single",
+      "stem": "在制品规模越小越好，因为这样可以优化前置时间，并且团队的效率会变高。",
+      "options": [
+        {
+          "key": "A",
+          "text": "正确"
+        },
+        {
+          "key": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "「在制品规模越小越好」是一个常见误解。看板和精益强调的是「适当」的 WIP 限制——太小会导致频繁的上下文切换和闲置时间（瓶颈前的人无事可做），太大则导致任务堆积和前置时间膨胀。存在一个最优的 WIP 范围，而非追求无限小。过小的 WIP 反而可能降低整体吞吐量。",
+      "source": "参考：Kanban Method — Limit WIP",
+      "source_url": "https://kanbanguides.org/"
+    },
+    {
+      "id": 27,
+      "type": "multiple",
+      "stem": "在组成派看来，软件架构是指？",
+      "options": [
+        {
+          "key": "A",
+          "text": "软件架构是一系列重要决策的集合，包括构成系统的结构要素及其接口的选择。"
+        },
+        {
+          "key": "B",
+          "text": "软件架构包括系统组件、连接件和约束的集合。"
+        },
+        {
+          "key": "C",
+          "text": "软件架构由软件元素、这些元素的外部可见属性，以及元素之间的关系组成。"
+        },
+        {
+          "key": "D",
+          "text": "软件架构将系统定义为计算组件及组件间的交互。"
+        }
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "在软件架构领域，「组成派」将软件架构视为系统组件、连接件和约束的集合（B），或计算组件及其交互的集合（D），或软件元素及其外部可见属性和关系的集合（C）。而选项 A（软件架构是一系列重要决策的集合）是「决策派」的观点，不属于组成派。",
+      "source": "参考：软件架构定义的不同学派 — Perry & Wolf (1992), Garlan & Shaw, Bass et al.",
+      "source_url": "https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=513807"
+    },
+    {
+      "id": 28,
+      "type": "multiple",
+      "stem": "分层架构将软件系统的组件分成多个互不重叠的层，包括",
+      "options": [
+        {
+          "key": "A",
+          "text": "物理层"
+        },
+        {
+          "key": "B",
+          "text": "表现层"
+        },
+        {
+          "key": "C",
+          "text": "业务层"
+        },
+        {
+          "key": "D",
+          "text": "应用层"
+        }
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "accuracy": null,
+      "explanation": "经典的分层架构通常包含：表现层（处理用户界面和外部请求）、业务层（核心业务逻辑）、持久层（数据访问）、数据库层。题目问分层架构「包括」哪些——选中项是表现层和业务层，这两层是分层架构最核心的「必选」分层。物理层不是软件分层的标准命名，应用层在不同语境下有不同含义（有时等同于业务层）。此题以课程材料中的分类为准。",
+      "source": "参考：分层架构经典定义 (Wikipedia / Martin Fowler P of EAA)",
+      "source_url": "https://martinfowler.com/bliki/PresentationDomainDataLayering.html"
+    },
+    {
+      "id": 29,
+      "type": "single",
+      "stem": "在应用分层架构的软件系统中，最先处理外部请求的是：",
+      "options": [
+        {
+          "key": "A",
+          "text": "业务层"
+        },
+        {
+          "key": "B",
+          "text": "应用层"
+        },
+        {
+          "key": "C",
+          "text": "表现层"
+        },
+        {
+          "key": "D",
+          "text": "数据层"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "在分层架构中，外部请求的典型路径是：表现层（Presentation Layer）→ 业务层（Business Layer）→ 持久层（Persistence Layer）→ 数据库。因此，最先处理外部请求的是表现层。它负责接收 HTTP 请求、解析参数、调用下层服务，并将结果渲染返回。",
+      "source": "参考：Martin Fowler, Patterns of Enterprise Application Architecture",
+      "source_url": "https://martinfowler.com/eaaCatalog/"
+    },
+    {
+      "id": 30,
+      "type": "multiple",
+      "stem": "分层架构模式的缺点包括：",
+      "options": [
+        {
+          "key": "A",
+          "text": "不易于持续发布和部署"
+        },
+        {
+          "key": "B",
+          "text": "由于层间依赖关系，软件系统的可扩展性差"
+        },
+        {
+          "key": "C",
+          "text": "软件升级需要暂停整个服务"
+        },
+        {
+          "key": "D",
+          "text": "额外的性能开销"
+        }
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "分层架构的四个主要缺点：(A) 不易于持续发布和部署——因为代码耦合为整体，每次变更需要全量构建和部署；(B) 层间依赖关系导致可扩展性差——垂直扩展容易，水平扩展困难；(C) 升级需要暂停服务——单体架构通常不支持热更新；(D) 性能开销——请求需要穿越多个层，每层都有序列化/反序列化和网络或进程间调用成本。",
+      "source": "参考：Mark Richards, \"Software Architecture Patterns\" (O'Reilly)",
+      "source_url": "https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/"
+    },
+    {
+      "id": 31,
+      "type": "multiple",
+      "stem": "以下哪几个不是面向服务架构强调的实现原则？",
+      "options": [
+        {
+          "key": "A",
+          "text": "服务去中心化"
+        },
+        {
+          "key": "B",
+          "text": "服务简单"
+        },
+        {
+          "key": "C",
+          "text": "服务重用"
+        },
+        {
+          "key": "D",
+          "text": "服务解耦"
+        }
+      ],
+      "answer": [
+        "A",
+        "B"
+      ],
+      "accuracy": null,
+      "explanation": "题目要求选「不是」SOA 核心原则的选项。面向服务架构（SOA）强调的实现原则包括：服务重用、服务解耦、服务抽象、服务自治、服务可组合性等。A「服务去中心化」和 B「服务简单」不是 SOA 的核心实现原则——前者是微服务架构的特征，后者也不符合 SOA 企业级重量级的定位。C（服务重用）和 D（服务解耦）是 SOA 的核心原则，因此未被选中。",
+      "source": "参考：Thomas Erl, \"SOA Principles of Service Design\"",
+      "source_url": "https://www.soaschool.com/"
+    },
+    {
+      "id": 32,
+      "type": "single",
+      "stem": "本质上，微服务架构是SOA的一种扩展。",
+      "options": [
+        {
+          "key": "A",
+          "text": "错误"
+        },
+        {
+          "key": "B",
+          "text": "正确"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "微服务架构在本质上是 SOA 的一种演进和精化——两者共享「通过服务接口进行系统分解」的核心理念。但微服务更强调去中心化治理、去中心化数据管理、轻量级通信协议（REST 而非 SOAP），以及独立部署。业界普遍认为微服务是「SOA 做对了的样子」(SOA done right)。",
+      "source": "参考：Martin Fowler, \"Microservices\"",
+      "source_url": "https://martinfowler.com/articles/microservices.html"
+    },
+    {
+      "id": 33,
+      "type": "multiple",
+      "stem": "以下选项中，哪些属于微服务架构的特点？",
+      "options": [
+        {
+          "key": "A",
+          "text": "中心化"
+        },
+        {
+          "key": "B",
+          "text": "基础设施自动化"
+        },
+        {
+          "key": "C",
+          "text": "通过服务组件化"
+        },
+        {
+          "key": "D",
+          "text": "内聚和解耦"
+        }
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "微服务架构的核心特点包括：(B) 基础设施自动化——容器化、CI/CD、自动化部署；(C) 通过服务组件化——每个微服务是一个独立的可部署组件；(D) 内聚和解耦——服务内部高内聚、服务之间松耦合。而 (A) 中心化是单体架构的特征，微服务强调去中心化。",
+      "source": "Martin Fowler, \"Microservices\"",
+      "source_url": "https://martinfowler.com/articles/microservices.html"
+    },
+    {
+      "id": 34,
+      "type": "single",
+      "stem": "以下对于微服务优点的描述中，哪一个是错误的？",
+      "options": [
+        {
+          "key": "A",
+          "text": "微服务系统测试变得非常简单"
+        },
+        {
+          "key": "B",
+          "text": "单个微服务很简单，只关注一个业务功能"
+        },
+        {
+          "key": "C",
+          "text": "微服务可以使用RPC进行服务间通信"
+        },
+        {
+          "key": "D",
+          "text": "不同的微服务可以使用不同的语言进行开发"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "微服务架构的一个显著挑战是测试复杂性——分布式系统的集成测试和端到端测试远比单体系统复杂。其他三个选项都是微服务的真实优点：单个服务职责单一、可以使用不同技术栈、通过 RPC/REST 进行服务间通信。因此 A「测试变得非常简单」是错误的。",
+      "source": "参考：Martin Fowler, \"Microservices\"",
+      "source_url": "https://martinfowler.com/articles/microservices.html"
+    },
+    {
+      "id": 35,
+      "type": "multiple",
+      "stem": "与面向服务架构相关的Web服务标准包括：",
+      "options": [
+        {
+          "key": "A",
+          "text": "UML"
+        },
+        {
+          "key": "B",
+          "text": "HTTPS"
+        },
+        {
+          "key": "C",
+          "text": "SOAP"
+        },
+        {
+          "key": "D",
+          "text": "WSDL"
+        }
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "SOA 相关的 Web 服务标准包括：SOAP（Simple Object Access Protocol）——基于 XML 的消息协议；WSDL（Web Services Description Language）——描述服务接口；UDDI（Universal Description, Discovery and Integration）——服务注册与发现。HTTPS 是传输层安全协议，也是 Web 服务通信的基础。UML 是建模语言，不属于 Web 服务标准。",
+      "source": "W3C Web Services Standards",
+      "source_url": "https://www.w3.org/TR/wsdl/ https://www.w3.org/TR/soap/"
+    },
+    {
+      "id": 36,
+      "type": "single",
+      "stem": "以下哪些是Docker的存储驱动：",
+      "options": [
+        {
+          "key": "A",
+          "text": "其他都是"
+        },
+        {
+          "key": "B",
+          "text": "Device mapper"
+        },
+        {
+          "key": "C",
+          "text": "OverlayFS"
+        },
+        {
+          "key": "D",
+          "text": "AUFS"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "Docker 支持多种存储驱动：AUFS（早期的默认驱动，需内核补丁）、Device Mapper（RHEL/CentOS 推荐的块级驱动）、OverlayFS（目前最推荐的默认驱动，overlay2）。因此选项 A「其他都是」是正确的——这三者都是 Docker 的合法存储驱动。",
+      "source": "Docker Documentation — Storage Drivers",
+      "source_url": "https://docs.docker.com/storage/storagedriver/"
+    },
+    {
+      "id": 37,
+      "type": "single",
+      "stem": "以下哪个命令可以查看当前运行容器：",
+      "options": [
+        {
+          "key": "A",
+          "text": "docker top"
+        },
+        {
+          "key": "B",
+          "text": "docker run"
+        },
+        {
+          "key": "C",
+          "text": "docker ps"
+        },
+        {
+          "key": "D",
+          "text": "docker logs"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "`docker ps` 是查看当前运行中的容器的命令（默认只显示运行中的；`-a` 显示包括已停止的所有容器）。`docker run` 创建并启动新容器；`docker top` 显示容器的进程信息（非列出容器）；`docker logs` 查看容器日志。",
+      "source": "Docker CLI Reference",
+      "source_url": "https://docs.docker.com/reference/cli/docker/ps/"
+    },
+    {
+      "id": 38,
+      "type": "single",
+      "stem": "以下哪些是Kubernetes的控制器：",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rolling Updates"
+        },
+        {
+          "key": "B",
+          "text": "ReplicaSet"
+        },
+        {
+          "key": "C",
+          "text": "Deployment"
+        },
+        {
+          "key": "D",
+          "text": "Both ReplicaSet and Deployment"
+        }
+      ],
+      "answer": "D",
+      "accuracy": null,
+      "explanation": "Kubernetes 的控制器（Controller）包括 ReplicaSet（确保指定数量的 Pod 副本运行）和 Deployment（建立在 ReplicaSet 之上，提供声明式更新和回滚）。Rolling Updates 是 Deployment 的一种更新策略，不是独立的控制器。因此「Both ReplicaSet and Deployment」是正确的。",
+      "source": "Kubernetes Documentation — Workloads",
+      "source_url": "https://kubernetes.io/docs/concepts/workloads/controllers/"
+    },
+    {
+      "id": 39,
+      "type": "single",
+      "stem": "以下哪些是Kubernetes的核心概念",
+      "options": [
+        {
+          "key": "A",
+          "text": "Volumes"
+        },
+        {
+          "key": "B",
+          "text": "Services"
+        },
+        {
+          "key": "C",
+          "text": "其他都是"
+        },
+        {
+          "key": "D",
+          "text": "Pods"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "Kubernetes 的核心概念包括 Pods（最小的部署单元）、Services（稳定的网络接入点）、Volumes（持久化存储）等。选项中 Pods、Services、Volumes 都是核心概念，所以「其他都是」正确。",
+      "source": "Kubernetes Documentation — Concepts",
+      "source_url": "https://kubernetes.io/docs/concepts/"
+    },
+    {
+      "id": 40,
+      "type": "single",
+      "stem": "Kubernetes里面的Replication控制器的职责是：",
+      "options": [
+        {
+          "key": "A",
+          "text": "当已存在的Pod异常退出后，创建新的Pod"
+        },
+        {
+          "key": "B",
+          "text": "删除或者更新多个Pod"
+        },
+        {
+          "key": "C",
+          "text": "其他都是"
+        },
+        {
+          "key": "D",
+          "text": "帮助达到预期的状态"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "Replication 控制器（现在称为 ReplicaSet）的职责包括：当已存在的 Pod 异常退出时创建新的（A）、帮助达到并维持期望的 Pod 数量状态（D）、以及管理 Pod 的生命周期（创建/删除/更新）。因此「其他都是」正确。在 Kubernetes 中，ReplicaSet 确保在任何时刻都有指定数量的 Pod 副本在运行。",
+      "source": "Kubernetes Documentation — ReplicaSet",
+      "source_url": "https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/"
+    },
+    {
+      "id": 41,
+      "type": "single",
+      "stem": "如何通过命令行创建一个容器",
+      "options": [
+        {
+          "key": "A",
+          "text": "docker run"
+        },
+        {
+          "key": "B",
+          "text": "docker start"
+        },
+        {
+          "key": "C",
+          "text": "docker poll"
+        },
+        {
+          "key": "D",
+          "text": "docker create"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "`docker run` 是创建并启动一个新容器的命令（等价于 `docker create` + `docker start`）。`docker start` 启动一个已存在但停止的容器；`docker create` 创建容器但不启动；没有 `docker poll` 命令。",
+      "source": "Docker CLI Reference — docker run",
+      "source_url": "https://docs.docker.com/reference/cli/docker/container/run/"
+    },
+    {
+      "id": 42,
+      "type": "single",
+      "stem": "使用Kubernetes带来的好处有哪些",
+      "options": [
+        {
+          "key": "A",
+          "text": "自动回滚"
+        },
+        {
+          "key": "B",
+          "text": "自动调度"
+        },
+        {
+          "key": "C",
+          "text": "其他都是"
+        },
+        {
+          "key": "D",
+          "text": "横向扩展"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "Kubernetes 的好处包括：自动调度（将 Pod 分配到合适的节点上）、自动回滚（通过 Deployment 的实现）、横向扩展（自动或手动调整 Pod 副本数量）。这些都属于 Kubernetes 的核心功能，因此「其他都是」正确。",
+      "source": "Kubernetes Documentation — Overview",
+      "source_url": "https://kubernetes.io/docs/concepts/overview/"
+    },
+    {
+      "id": 43,
+      "type": "single",
+      "stem": "以下哪项用于确保pod不会被调度到不适当的节点上？",
+      "options": [
+        {
+          "key": "A",
+          "text": "Taints 和 Tolerations"
+        },
+        {
+          "key": "B",
+          "text": "Taints"
+        },
+        {
+          "key": "C",
+          "text": "以上都不是"
+        },
+        {
+          "key": "D",
+          "text": "Tolerations"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "Taints（污点）和 Tolerations（容忍）是 Kubernetes 中用于 Pod 调度的机制。Taints 标记在 Node 上，表示「不要调度不匹配的 Pod 到这个节点」；Tolerations 标记在 Pod 上，表示「这个 Pod 可以容忍这个节点的污点」。两者配合使用才能确保 Pod 不会被调度到不适当的节点上。单独的 Taints 或 Tolerations 都不够——必须两者配合。",
+      "source": "Kubernetes Documentation — Taints and Tolerations",
+      "source_url": "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/"
+    },
+    {
+      "id": 44,
+      "type": "single",
+      "stem": "关于Kubernetes的namespace的论述是否正确：命名空间是在多个用户之间划分群集资源的方法",
+      "options": [
+        {
+          "key": "A",
+          "text": "错误"
+        },
+        {
+          "key": "B",
+          "text": "正确"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "Kubernetes 中的 Namespace 是用于在多个用户或团队之间划分集群资源的虚拟隔离机制。它提供了一种方法将集群资源划分为互不重叠的组，适合多团队共享同一集群的场景。这个描述是正确的。",
+      "source": "Kubernetes Documentation — Namespaces",
+      "source_url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/"
+    },
+    {
+      "id": 45,
+      "type": "multiple",
+      "stem": "Docker容器的状态有",
+      "options": [
+        {
+          "key": "A",
+          "text": "Restarting"
+        },
+        {
+          "key": "B",
+          "text": "Exited"
+        },
+        {
+          "key": "C",
+          "text": "Paused"
+        },
+        {
+          "key": "D",
+          "text": "Running"
+        }
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "Docker 容器的标准状态包括：Created（已创建）、Running（运行中）、Paused（暂停）、Restarting（重启中）、Exited（已退出）、Dead（已死亡）。题中选项 B（Exited）和 D（Running）是 Docker 容器的正式状态。Paused 和 Restarting 也是 Docker 状态，但此题答案标记为 B、D，可能源于特定课堂材料中的状态分类。",
+      "source": "参考：Docker 容器状态文档",
+      "source_url": "https://docs.docker.com/reference/cli/docker/ps/"
+    },
+    {
+      "id": 46,
+      "type": "single",
+      "stem": "下列哪项不属于协同开发工具？",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rally"
+        },
+        {
+          "key": "B",
+          "text": "JIRA"
+        },
+        {
+          "key": "C",
+          "text": "Kanban"
+        },
+        {
+          "key": "D",
+          "text": "Confluence"
+        }
+      ],
+      "answer": "D",
+      "accuracy": null,
+      "explanation": "协同开发工具指用于团队协作和项目管理的工具。Rally（敏捷项目管理）、JIRA（事务跟踪和项目管理）、Kanban（看板工具）都属于协同开发工具。Confluence 是 Atlassian 的 Wiki 和知识管理工具——虽然也用于协同，但在分类上更偏「文档协作」而非「开发协同」。此题中的分类以课程材料为准。",
+      "source": "参考：常见协同开发工具分类",
+      "source_url": ""
+    },
+    {
+      "id": 47,
+      "type": "single",
+      "stem": "下列哪种持续集成工具是目前DevOps领域使用最广泛的？",
+      "options": [
+        {
+          "key": "A",
+          "text": "TeamCity"
+        },
+        {
+          "key": "B",
+          "text": "Jenkins"
+        },
+        {
+          "key": "C",
+          "text": "Travis CI"
+        },
+        {
+          "key": "D",
+          "text": "VSTS"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "Jenkins 是目前 DevOps 领域使用最广泛的持续集成工具。根据多份行业调查报告（如 JetBrains Developer Survey、Stack Overflow Survey），Jenkins 的 CI/CD 市场份额长期领先于 TeamCity、Travis CI 和 Azure DevOps (VSTS)。",
+      "source": "JetBrains Developer Survey / Stack Overflow Developer Survey — CI/CD Tools",
+      "source_url": "https://www.jetbrains.com/lp/devecosystem-2023/team-tools/"
+    },
+    {
+      "id": 48,
+      "type": "single",
+      "stem": "Jenkins支持工作流即代码（pipeline-as-code）。",
+      "options": [
+        {
+          "key": "A",
+          "text": "正确"
+        },
+        {
+          "key": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "Jenkins 支持 Pipeline-as-Code，即用 Jenkinsfile（基于 Groovy DSL）来定义构建流水线。这使得 CI/CD 流程可以像代码一样进行版本控制、代码审查和重用。这一特性自 Jenkins 2.0（2016 年）引入后成为其标志性功能。",
+      "source": "Jenkins Documentation — Pipeline",
+      "source_url": "https://www.jenkins.io/doc/book/pipeline/"
+    },
+    {
+      "id": 49,
+      "type": "single",
+      "stem": "以下哪项不是Git的文件目录？",
+      "options": [
+        {
+          "key": "A",
+          "text": "Documents"
+        },
+        {
+          "key": "B",
+          "text": "加载区"
+        },
+        {
+          "key": "C",
+          "text": "工作目录"
+        },
+        {
+          "key": "D",
+          "text": ".git目录"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "Git 的核心目录结构包括：工作目录（Working Directory）——存放实际文件的目录；暂存区（Staging Area / Index）——暂存要提交的更改；.git 目录——存放所有版本控制元数据的隐藏目录（包括对象库、引用、配置等）。「Documents」不是 Git 的固有概念——它与 Git 的工作机制无关。",
+      "source": "Pro Git Book — Git Basics",
+      "source_url": "https://git-scm.com/book/en/v2/Getting-Started-Git-Basics"
+    },
+    {
+      "id": 50,
+      "type": "single",
+      "stem": "下列哪种编译工具无法编译JAVA语言？",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gradle"
+        },
+        {
+          "key": "B",
+          "text": "Ant"
+        },
+        {
+          "key": "C",
+          "text": "MSBuild"
+        },
+        {
+          "key": "D",
+          "text": "Maven"
+        }
+      ],
+      "answer": "C",
+      "accuracy": null,
+      "explanation": "Gradle（基于 Groovy/Kotlin DSL）、Ant（基于 XML）、Maven（基于 POM）都是 Java 生态中的主流构建工具。MSBuild 是 Microsoft Build Engine，用于 .NET 和 C++ 项目，不能直接编译 Java 语言。",
+      "source": "MSBuild Documentation / Java Build Tool Comparison",
+      "source_url": "https://docs.microsoft.com/en-us/visualstudio/msbuild/"
+    },
+    {
+      "id": 51,
+      "type": "single",
+      "stem": "下列哪种工具无法实现对远程服务器的配置操作？",
+      "options": [
+        {
+          "key": "A",
+          "text": "JIRA"
+        },
+        {
+          "key": "B",
+          "text": "Ansible"
+        },
+        {
+          "key": "C",
+          "text": "Puppt"
+        },
+        {
+          "key": "D",
+          "text": "Chef"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "题目问哪项「不属于」协同开发工具。选中项「Confluence」被归类为不属于协同开发工具——它是 Atlassian 的 Wiki 和知识管理工具，虽然也用于团队协作，但课程材料将其分类为文档协作工具而非开发协同工具。Rally（敏捷项目管理）、JIRA（事务跟踪）、Kanban（看板工具）均属于协同开发工具。",
+      "source": "配置管理工具对比及各自官方文档",
+      "source_url": "https://www.ansible.com/ https://puppet.com/ https://www.chef.io/"
+    },
+    {
+      "id": 52,
+      "type": "single",
+      "stem": "Selenium能实现自动化单元测试。",
+      "options": [
+        {
+          "key": "A",
+          "text": "错误"
+        },
+        {
+          "key": "B",
+          "text": "正确"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "Selenium 是一个 Web 浏览器自动化工具，主要用于端到端（E2E）功能测试和回归测试。它操作的是浏览器层面的 UI 交互，属于功能测试而非单元测试。单元测试通常在代码层面（如 JUnit for Java、pytest for Python）进行，测试单个函数或模块的逻辑。因此说 Selenium 能实现「自动化单元测试」是错误的——它做的是 UI 自动化测试。",
+      "source": "Selenium Official Documentation",
+      "source_url": "https://www.selenium.dev/documentation/"
+    },
+    {
+      "id": 53,
+      "type": "single",
+      "stem": "以下哪种工具是开源工具？",
+      "options": [
+        {
+          "key": "A",
+          "text": "Zabbix"
+        },
+        {
+          "key": "B",
+          "text": "JIRA"
+        },
+        {
+          "key": "C",
+          "text": "TeamCity"
+        },
+        {
+          "key": "D",
+          "text": "JUnit"
+        }
+      ],
+      "answer": "D",
+      "accuracy": null,
+      "explanation": "JUnit 是一个开源的 Java 单元测试框架（遵循 Eclipse Public License）。Zabbix 也是开源的（GPL），但 JIRA（Atlassian 商业软件）和 TeamCity（JetBrains 商业软件）需要付费许可证（虽有免费版本但非开源）。注意此题答案以课程材料为准。",
+      "source": "JUnit 5 Official Site",
+      "source_url": "https://junit.org/junit5/"
+    },
+    {
+      "id": 54,
+      "type": "multiple",
+      "stem": "下列哪些工具不能模拟市场上主流浏览器的操作？",
+      "options": [
+        {
+          "key": "A",
+          "text": "FitNesse"
+        },
+        {
+          "key": "B",
+          "text": "Jenkins"
+        },
+        {
+          "key": "C",
+          "text": "JUnit"
+        },
+        {
+          "key": "D",
+          "text": "Selenium"
+        }
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "accuracy": null,
+      "explanation": "题目要求选「不能」模拟主流浏览器操作的工具。Selenium 是专门用于浏览器自动化操作的工具，因此未被选中。A（FitNesse）是验收测试框架（Wiki-based），B（Jenkins）是 CI 工具，C（JUnit）是单元测试框架——这三个都不具备模拟浏览器操作的能力，所以是正确选项。",
+      "source": "参考：各工具官方文档对比",
+      "source_url": "https://www.selenium.dev/"
+    },
+    {
+      "id": 55,
+      "type": "single",
+      "stem": "以下选项中，哪一项不属于微服务架构的特点？",
+      "options": [
+        {
+          "key": "A",
+          "text": "基础设施自动化"
+        },
+        {
+          "key": "B",
+          "text": "低内聚和高耦合"
+        },
+        {
+          "key": "C",
+          "text": "围绕业务能力组织"
+        },
+        {
+          "key": "D",
+          "text": "去中心化"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "微服务架构的特点包括：基础设施自动化、围绕业务能力组织、去中心化、内聚和解耦。而「低内聚和高耦合」恰恰是微服务要避免的反模式——微服务追求的是高内聚（服务内部职责集中）和低耦合（服务之间依赖最小）。",
+      "source": "Martin Fowler, \"Microservices\"",
+      "source_url": "https://martinfowler.com/articles/microservices.html"
+    },
+    {
+      "id": 56,
+      "type": "multiple",
+      "stem": "以下对于微服务优点的描述中，哪几项是正确的？",
+      "options": [
+        {
+          "key": "A",
+          "text": "不同的微服务可以使用不同的语言进行开发。"
+        },
+        {
+          "key": "B",
+          "text": "单个微服务很简单，只关注一个业务功能"
+        },
+        {
+          "key": "C",
+          "text": "微服务系统测试变得非常简单"
+        },
+        {
+          "key": "D",
+          "text": "微服务可以使用RPC进行服务间通信"
+        }
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "accuracy": null,
+      "explanation": "微服务的真正优点包括：(A) 不同微服务可以使用不同语言——技术多样性；(B) 单个服务功能集中且简单；(D) 通过 RPC/REST 进行服务间通信。但 (C) 系统测试变得简单是错误描述——分布式系统的集成测试是微服务的主要挑战之一。",
+      "source": "参考：Martin Fowler, \"Microservices\"",
+      "source_url": "https://martinfowler.com/articles/microservices.html"
+    },
+    {
+      "id": 57,
+      "type": "single",
+      "stem": "在组成派看来，软件架构是一系列重要决策的集合，包括构成系统的结构要素及其接口的选择。",
+      "options": [
+        {
+          "key": "A",
+          "text": "错误"
+        },
+        {
+          "key": "B",
+          "text": "正确"
+        }
+      ],
+      "answer": "A",
+      "accuracy": null,
+      "explanation": "「软件架构是一系列重要决策的集合，包括构成系统的结构要素及其接口的选择」这个定义来自「决策派」而非「组成派」。组成派的典型定义是：软件架构由组件、连接件和约束组成（Shaw & Garlan），或由软件元素及其外部可见属性组成（Bass, Clements, Kazman）。这两种视角在软件架构研究中并存。",
+      "source": "参考：Bass, Clements, Kazman, \"Software Architecture in Practice\"",
+      "source_url": "https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=513807"
+    },
+    {
+      "id": 58,
+      "type": "single",
+      "stem": "微服务架构的特点包括“围绕业务能力组织”、“内聚和解耦”、“基础设施自动化”等。",
+      "options": [
+        {
+          "key": "A",
+          "text": "错误"
+        },
+        {
+          "key": "B",
+          "text": "正确"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "微服务架构的核心特点确实包括：围绕业务能力组织（而非技术层次）、内聚和解耦、基础设施自动化（容器化、CI/CD）。此外还有去中心化治理、去中心化数据管理、演进式设计等。题目描述的这三个特征准确概括了微服务架构的核心特性。",
+      "source": "Martin Fowler, \"Microservices\"",
+      "source_url": "https://martinfowler.com/articles/microservices.html"
+    },
+    {
+      "id": 59,
+      "type": "single",
+      "stem": "持续集成是DevOps理念中重要的一个实践环节，它经历了纯脚本驱动到持续集成工具两个发展阶段，目前正向第三个阶段流水线即代码的阶段发展",
+      "options": [
+        {
+          "key": "A",
+          "text": "错误"
+        },
+        {
+          "key": "B",
+          "text": "正确"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "持续集成经历了三个发展阶段：(1) 纯脚本驱动阶段——开发者手动编写构建脚本；(2) 持续集成工具阶段——Jenkins、TeamCity 等专用工具；(3) 流水线即代码（Pipeline as Code）阶段——Jenkinsfile、GitHub Actions、GitLab CI 等以声明式或脚本式定义流水线。当前主流正处于第三阶段。这个描述正确。",
+      "source": "Martin Fowler, \"Continuous Integration\"",
+      "source_url": "https://martinfowler.com/articles/continuousIntegration.html"
+    },
+    {
+      "id": 60,
+      "type": "single",
+      "stem": "Git、GitHub、GitLab是完全不一样的三款版本管理工具",
+      "options": [
+        {
+          "key": "A",
+          "text": "正确"
+        },
+        {
+          "key": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": "B",
+      "accuracy": null,
+      "explanation": "Git 是一个分布式版本控制系统；GitHub 是一个基于 Git 的代码托管和协作平台；GitLab 同样是一个基于 Git 的 DevOps 平台（提供代码托管、CI/CD、项目管理等）。三者并非「完全不一样」——它们以 Git 为共同基础。Git 是版本控制工具，GitHub 和 GitLab 是围绕 Git 构建的平台服务。",
+      "source": "Git SCM / GitHub / GitLab Official Sites",
+      "source_url": "https://git-scm.com/ https://github.com/ https://about.gitlab.com/"
+    }
+  ]
+}

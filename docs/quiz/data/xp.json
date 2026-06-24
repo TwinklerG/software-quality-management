@@ -1,0 +1,567 @@
+{
+  "subject": "xp",
+  "title": "Extreme Programming 2026 课堂小测",
+  "totalQuestions": 20,
+  "questions": [
+    {
+      "id": 1,
+      "type": "single",
+      "stem": "传统软件工程假设:从需求到生产，同一个 bug 的修复成本随时间呈何种形态变化（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "指数增长"
+        },
+        {
+          "key": "B",
+          "text": "保持平稳"
+        },
+        {
+          "key": "C",
+          "text": "线性下降"
+        },
+        {
+          "key": "D",
+          "text": "先升后降"
+        }
+      ],
+      "answer": "A",
+      "accuracy": 96.86,
+      "explanation": "传统软件工程的核心假设之一是：bug 修复成本随时间呈**指数增长**（exponential growth）。需求阶段修复只需改文档；开发阶段改代码；测试阶段重新验证；生产环境则需紧急修复+热补丁+可能的回滚。这就是 Barry Boehm 的经典「变更成本曲线」，也是敏捷方法强调早期测试和持续反馈的根本原因。",
+      "source": "Barry Boehm, \"Software Engineering Economics\", 1981",
+      "source_url": "https://martinfowler.com/articles/continuousIntegration.html"
+    },
+    {
+      "id": 2,
+      "type": "single",
+      "stem": "Kent Beck 1996 年押\"变更曲线可被压平\"的项目是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "福特 1990 年的 ERP 项目"
+        },
+        {
+          "key": "B",
+          "text": "克莱斯勒 C3 薪资系统（Smalltalk · 8.7 万员工）"
+        },
+        {
+          "key": "C",
+          "text": "IBM 1992 年的 OS/2"
+        },
+        {
+          "key": "D",
+          "text": "戴姆勒 2000 年的电商系统"
+        }
+      ],
+      "answer": "B",
+      "accuracy": 96.23,
+      "explanation": "Kent Beck 在 1996 年被邀请优化**克莱斯勒 C3（Comprehensive Compensation System）薪资项目**的性能。该项目使用 Smalltalk 语言，服务于 8.7 万员工。在调试过程中，Beck 观察到大量开发实践问题，由此开始系统性地提炼 XP 的实践集。C3 项目虽于 2000 年因业务原因取消，但 XP 方法论从此诞生。",
+      "source": "Martin Fowler, \"C3 — The Chrysler Comprehensive Compensation Project\"",
+      "source_url": "https://martinfowler.com/bliki/C3.html"
+    },
+    {
+      "id": 3,
+      "type": "single",
+      "stem": "《Extreme Programming Explained》1999 年首版给出的四大价值观是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "流程、工具、个人、变化"
+        },
+        {
+          "key": "B",
+          "text": "迭代、估算、回顾、计划"
+        },
+        {
+          "key": "C",
+          "text": "交流、协作、纪律、文档"
+        },
+        {
+          "key": "D",
+          "text": "交流、简单、反馈、勇气"
+        }
+      ],
+      "answer": "D",
+      "accuracy": 96.23,
+      "explanation": "《Extreme Programming Explained》(1999) 首版给出的四大价值观是：**Communication（交流）、Simplicity（简单）、Feedback（反馈）、Courage（勇气）**。第二版（2004）新增了第五个价值观 Respect（尊重）。这四个价值观是一切 XP 实践的根基。",
+      "source": "Kent Beck, \"Extreme Programming Explained\", 1st Edition, 1999",
+      "source_url": "https://www.agilealliance.org/glossary/xp-values/"
+    },
+    {
+      "id": 4,
+      "type": "single",
+      "stem": "XP 中\"为了稳定可预测的开发，必要的事最终收敛到\"的四项基本活动是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "需求、设计、开发、测试"
+        },
+        {
+          "key": "B",
+          "text": "计划、估算、实现、回顾"
+        },
+        {
+          "key": "C",
+          "text": "沟通、协作、构建、部署"
+        },
+        {
+          "key": "D",
+          "text": "编码、测试、倾听、设计"
+        }
+      ],
+      "answer": "D",
+      "accuracy": 89.31,
+      "explanation": "XP 的四项基本活动是：**Coding（编码）、Testing（测试）、Listening（倾听）、Designing（设计）**。Kent Beck 认为，软件开发中所有必要的工作最终都会收敛到这四个活动中。编码和测试是核心环路，倾听获取需求，设计保持系统简洁。",
+      "source": "Kent Beck, \"Extreme Programming Explained\", 2nd Edition, 2004",
+      "source_url": "https://www.agilealliance.org/glossary/xp/"
+    },
+    {
+      "id": 5,
+      "type": "single",
+      "stem": "Kent Beck 简单设计四准则按优先级排序时，第一条（最高优先级）是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "消除重复"
+        },
+        {
+          "key": "B",
+          "text": "清晰表达每一个对程序员重要的意图"
+        },
+        {
+          "key": "C",
+          "text": "最小化类和方法的数量"
+        },
+        {
+          "key": "D",
+          "text": "通过所有测试"
+        }
+      ],
+      "answer": "D",
+      "accuracy": 91.19,
+      "explanation": "Kent Beck 简单设计四准则按优先级排序为：①**通过所有测试（Runs all tests）**——功能正确是第一前提；②消除重复（Remove duplication）；③清晰表达意图（Expresses intent）；④最小化类和方法的数量（Fewest elements）。测试通过是最高优先级，因为不正确的代码再简单也无意义。",
+      "source": "Kent Beck, \"Simple Design\" principles; Martin Fowler, \"Beck Design Rules\"",
+      "source_url": "https://martinfowler.com/bliki/BeckDesignRules.html"
+    },
+    {
+      "id": 6,
+      "type": "single",
+      "stem": "TDD 一轮最小循环的阶段顺序是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "红 → 绿 → 重构"
+        },
+        {
+          "key": "B",
+          "text": "绿 → 红 → 重构"
+        },
+        {
+          "key": "C",
+          "text": "重构 → 红 → 绿"
+        },
+        {
+          "key": "D",
+          "text": "设计 → 编码 → 测试"
+        }
+      ],
+      "answer": "A",
+      "accuracy": 94.97,
+      "explanation": "TDD 的最小循环是 **Red → Green → Refactor**（红 → 绿 → 重构）：①先写一个失败的测试（Red）；②写刚好足够的代码让它通过（Green）；③在保持测试通过的前提下重构代码（Refactor）。这个循环强调「永远不要写没有失败测试的代码」。",
+      "source": "Kent Beck, \"Test-Driven Development: By Example\", 2002",
+      "source_url": "https://martinfowler.com/bliki/TestDrivenDevelopment.html"
+    },
+    {
+      "id": 7,
+      "type": "single",
+      "stem": "在结对编程中，Driver（手握键鼠的人）的关注焦点是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "当下这个方法怎么实现最好——语法、边界、命名、测试通过"
+        },
+        {
+          "key": "B",
+          "text": "还有哪些测试没覆盖"
+        },
+        {
+          "key": "C",
+          "text": "整个方法方向是否正确"
+        },
+        {
+          "key": "D",
+          "text": "能否简化系统让当前问题自然消失"
+        }
+      ],
+      "answer": "A",
+      "accuracy": 96.86,
+      "explanation": "在结对编程中，**Driver（驾驶员）**的关注焦点是**当前这个方法的具体实现细节**：语法是否正确、边界条件是否处理、命名是否清晰、如何让测试通过。而 Navigator（领航员）关注更大的图景：还有什么测试没覆盖、整体方向是否正确、能否简化系统。两者分工互补。",
+      "source": "参考：Birgitta Böckeler & Nina Siessegger, \"On Pair Programming\", martinfowler.com",
+      "source_url": "https://martinfowler.com/articles/on-pair-programming.html"
+    },
+    {
+      "id": 8,
+      "type": "single",
+      "stem": "Fowler 持续集成中，\"提交阶段（Commit Stage）\"通常应控制在的时间内是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "≤1 分钟"
+        },
+        {
+          "key": "B",
+          "text": "≤10 分钟"
+        },
+        {
+          "key": "C",
+          "text": "≤30 分钟"
+        },
+        {
+          "key": "D",
+          "text": "≤2 小时"
+        }
+      ],
+      "answer": "B",
+      "accuracy": 91.19,
+      "explanation": "Martin Fowler 在持续集成实践中建议**提交阶段（Commit Stage）应控制在 ≤10 分钟**内完成。这个阶段包括编译和快速测试，目的是快速给出「这次提交是否安全」的反馈。如果超过 10 分钟，开发者会减少提交频率，CI 的核心价值——快速集成——就会被削弱。",
+      "source": "Martin Fowler, \"Continuous Integration\", martinfowler.com",
+      "source_url": "https://martinfowler.com/articles/continuousIntegration.html"
+    },
+    {
+      "id": 9,
+      "type": "single",
+      "stem": "关于 XP 的\"代码集体拥有制（Collective Ownership）\"，最准确的描述是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "集体拥有意味着没有规则，谁想改就改"
+        },
+        {
+          "key": "B",
+          "text": "集体拥有不需要任何配套实践即可推行"
+        },
+        {
+          "key": "C",
+          "text": "集体拥有由测试、结对、持续集成、编码标准四条绳子一起拉住，不是\"无所有权\"的别名"
+        },
+        {
+          "key": "D",
+          "text": "集体拥有等于\"个人所有权\"的反面，必须由架构师统一审批"
+        }
+      ],
+      "answer": "C",
+      "accuracy": 96.86,
+      "explanation": "XP 的代码集体拥有制意味着任何开发者都可以改进代码的任何部分，但它并非「无规则」。它由**四条配套实践「拴住」**：自动化测试（保证修改安全）、结对编程（保证知识传递）、持续集成（保证及时发现问题）、编码标准（保证代码风格统一）。缺少任何一条，集体拥有制都会失控。",
+      "source": "参考：Martin Fowler, \"Code Ownership\", martinfowler.com",
+      "source_url": "https://martinfowler.com/bliki/CodeOwnership.html"
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "stem": "关于 CI / CD / 持续部署三者的边界，正确的描述是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "CI 自动化到生产;CD 还要手动;持续部署只剩紧急刹车"
+        },
+        {
+          "key": "B",
+          "text": "三者完全等同，只是叫法不同"
+        },
+        {
+          "key": "C",
+          "text": "CI 自动化\"构建+快速测试\"，主线已集成已初步验证;CD 自动化整条流水线到类生产，只剩\"上生产\"按钮手动;持续部署连上生产都自动，只留紧急刹车"
+        },
+        {
+          "key": "D",
+          "text": "CI 是工具，CD 是方法，持续部署是组织模式"
+        }
+      ],
+      "answer": "C",
+      "accuracy": 98.11,
+      "explanation": "CI、CD 和持续部署三者的递进关系：**CI（持续集成）**自动化「构建+快速测试」，确保主线已集成已验证；**CD（持续交付）**自动化整条流水线到类生产环境，只保留「上线」按钮为手动；**持续部署（Continuous Deployment）**连上线都自动，只在紧急情况保留人为干预。三者层层递进，手动环节逐步减少。",
+      "source": "Martin Fowler, \"ContinuousDelivery\" & \"ContinuousIntegration\", martinfowler.com",
+      "source_url": "https://martinfowler.com/bliki/ContinuousDelivery.html"
+    },
+    {
+      "id": 11,
+      "type": "single",
+      "stem": "Martin Fowler 关于 UML 的立场是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "提倡\"草图用法\"——编码前白板探索、保持简短、只画关键结构、视为草图而非终稿、讨论完即擦掉"
+        },
+        {
+          "key": "B",
+          "text": "提倡\"终稿用法\"——作为蓝图交给另一团队构建"
+        },
+        {
+          "key": "C",
+          "text": "要求 UML 与代码长期同步维护，否则不合规"
+        },
+        {
+          "key": "D",
+          "text": "图比代码权威，应作为系统全面信息源"
+        }
+      ],
+      "answer": "A",
+      "accuracy": 96.86,
+      "explanation": "Martin Fowler 提倡 UML 的**草图用法（UML as Sketch）**：用 UML 在编码前做白板探索，保持简短，只画关键结构，视为临时草图而非永久文档，讨论完即可擦除。他强调「UML 是沟通工具，不是规格说明」。与之相反的是「蓝图用法」（UML as Blueprint）——将 UML 作为交给另一团队构建的详细蓝图。",
+      "source": "Martin Fowler, \"UML as Sketch\" & \"UML Modes\", martinfowler.com",
+      "source_url": "https://martinfowler.com/bliki/UmlAsSketch.html"
+    },
+    {
+      "id": 12,
+      "type": "single",
+      "stem": "根据持续集成讲义，主线构建坏了，团队首选的处理措施是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "立即在主线上修复，避免回滚"
+        },
+        {
+          "key": "B",
+          "text": "关闭 CI 流水线减少噪音"
+        },
+        {
+          "key": "C",
+          "text": "首选 git revert 那次提交，让主线立刻回到上一个绿色状态——把故障半径压到最小，解除对所有其他人的阻塞"
+        },
+        {
+          "key": "D",
+          "text": "把出错的开发者调离项目"
+        }
+      ],
+      "answer": "C",
+      "accuracy": 96.23,
+      "explanation": "当主线构建损坏时，最高优先级是**恢复主线到绿色状态**，解除对其他团队成员的阻塞。首选措施是 `git revert` 出错的那次提交，将故障半径压缩到最小。在损坏的主线上继续提交会导致更多问题叠加。这是 CI 文化的核心纪律之一。",
+      "source": "参考：Martin Fowler, \"Continuous Integration\" — Keep the Build Fast",
+      "source_url": "https://martinfowler.com/articles/continuousIntegration.html"
+    },
+    {
+      "id": 13,
+      "type": "single",
+      "stem": "关于\"重构（Refactoring）\"，最准确的定义是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "任何对现有代码的修改都叫重构"
+        },
+        {
+          "key": "B",
+          "text": "为引入新功能而必须改造代码的过程"
+        },
+        {
+          "key": "C",
+          "text": "必须由架构师审批后才能执行的代码修改"
+        },
+        {
+          "key": "D",
+          "text": "保留外部可见行为、只改善内部结构的优化;改变可见行为的是功能变更，不是重构"
+        }
+      ],
+      "answer": "D",
+      "accuracy": 97.48,
+      "explanation": "Martin Fowler 对重构的经典定义：**保留外部可见行为、只改善内部结构的代码优化**。关键词是「保留外部行为」——如果代码的可见行为改变了，那是功能变更，不是重构。重构是在「不改变软件可观察行为的前提下改善其内部结构」。",
+      "source": "Martin Fowler, \"Refactoring: Improving the Design of Existing Code\", 1999/2018",
+      "source_url": "https://martinfowler.com/bliki/RefactoringDefinition.html"
+    },
+    {
+      "id": 14,
+      "type": "single",
+      "stem": "讲义指出\"能编译\"不等于\"做对了事\"，因此 CI 中的\"自测试构建（Self-Testing Build）\"应该（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "只跑编译器和静态类型检查即可"
+        },
+        {
+          "key": "B",
+          "text": "构建 = 编译 + 完整自动化测试，任一测试失败整个构建变红，可加 Linter、静态分析、覆盖率"
+        },
+        {
+          "key": "C",
+          "text": "构建只检查代码风格是否统一"
+        },
+        {
+          "key": "D",
+          "text": "构建只需保证打包产物存在"
+        }
+      ],
+      "answer": "B",
+      "accuracy": 97.48,
+      "explanation": "CI 中的自测试构建要求在**编译 + 完整自动化测试都通过**时才判定构建为绿色。任一测试失败整个构建变红。此外可以加入 Linter、静态分析、代码覆盖率检查等作为额外的质量门禁。「能编译」只证明语法正确，自动化测试才能验证语义正确。",
+      "source": "Martin Fowler, \"Self Testing Code\" & \"Continuous Integration\", martinfowler.com",
+      "source_url": "https://martinfowler.com/bliki/SelfTestingCode.html"
+    },
+    {
+      "id": 15,
+      "type": "single",
+      "stem": "某团队声称在做 XP——CI 流水线天天绿灯、Sprint 仪式齐全，但坚决不写自动化测试。三个月后他们最可能撞上的局面是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "变更曲线提前压平，部署效率显著提升"
+        },
+        {
+          "key": "B",
+          "text": "CI 跑得越欢，坏代码合得越快——Fear Flywheel 启动，变更曲线悄悄回到指数形态，团队主动回避结构性改动"
+        },
+        {
+          "key": "C",
+          "text": "CI 流水线会自动检测出语义冲突，团队整体安全"
+        },
+        {
+          "key": "D",
+          "text": "TDD 与重构会因 CI 已搭好而自然涌现"
+        }
+      ],
+      "answer": "B",
+      "accuracy": 96.86,
+      "explanation": "没有自动化测试的 CI 是危险的——CI 跑得越欢，坏代码合入得越快。这被称为 **Fear Flywheel（恐惧飞轮）**：没有测试保护 → 不敢重构 → 代码腐化 → 变更成本上升 → 更不敢改代码 → 恶性循环。变更曲线不仅没有压平，反而悄悄回到指数形态。",
+      "source": "参考：Martin Fowler, \"Continuous Integration\"",
+      "source_url": "https://martinfowler.com/articles/continuousIntegration.html"
+    },
+    {
+      "id": 16,
+      "type": "single",
+      "stem": "某 50 人团队全员严格做 TDD，使用 GitHub Actions，但所有改动都走长期 feature branch + 强制 PR 评审，功能完成才合主线。Fowler 视角下这算 CI 吗（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "算，因为 TDD + 自动化构建已具备 CI 的核心要素"
+        },
+        {
+          "key": "B",
+          "text": "算，工具用什么不重要，关键看自动化程度"
+        },
+        {
+          "key": "C",
+          "text": "不算——CI 的\"集成\"字面意思是合到主线，判定标准是每天有没有真把代码合回主线，长期分支只是\"分支上的自动化构建\""
+        },
+        {
+          "key": "D",
+          "text": "不算，因为团队规模超过 10 人，CI 不适合大团队"
+        }
+      ],
+      "answer": "C",
+      "accuracy": 94.34,
+      "explanation": "Martin Fowler 对 CI 的核心判定标准是**有没有真把代码频繁合回主线**。长期 feature branch + PR 评审的模式，即使有自动化构建，也只是「分支上的自动化构建」，不是 CI。CI 的「集成」二字是指每天（甚至更频繁）将代码合并到 trunk/mainline，通过频繁集成来降低集成风险。",
+      "source": "Martin Fowler, \"Continuous Integration\" & \"Feature Branch\"",
+      "source_url": "https://martinfowler.com/bliki/FeatureBranch.html"
+    },
+    {
+      "id": 17,
+      "type": "single",
+      "stem": "有人主张 XP 的\"简单设计 + YAGNI\"实质就是\"粗糙、应付了事\"。最准确的判断是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "确实如此，简单等于不做设计"
+        },
+        {
+          "key": "B",
+          "text": "简单设计以重构能力 + 自动化测试套件为底气;缺这两条会退化成粗糙——简单不等于粗糙"
+        },
+        {
+          "key": "C",
+          "text": "YAGNI 反对一切抽象层和接口"
+        },
+        {
+          "key": "D",
+          "text": "简单设计就是 Code-fix 的另一种叫法"
+        }
+      ],
+      "answer": "B",
+      "accuracy": 96.86,
+      "explanation": "**简单设计不等于粗糙**。XP 的简单设计以两大支柱为基础：①重构能力——随时可以在测试保护下改善设计；②自动化测试套件——确保改动不会破坏已有功能。YAGNI（You Aren't Gonna Need It）要求「不提前构建不需要的东西」，而不是「不做设计」。原则是只做满足当前需求的最简设计，并通过持续重构保持其优良性。",
+      "source": "参考：Kent Beck, \"Simple Design\"; Martin Fowler, \"Yagni\"",
+      "source_url": "https://martinfowler.com/bliki/Yagni.html"
+    },
+    {
+      "id": 18,
+      "type": "single",
+      "stem": "某项目长期靠每周 50–60 小时加班维持进度，管理层认为这就是\"敬业\"。最贴合 XP 视角的判断是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "加班是高效团队的常态，应受表彰"
+        },
+        {
+          "key": "B",
+          "text": "只要每周不严格超过 40 小时就违规"
+        },
+        {
+          "key": "C",
+          "text": "长期加班是计划/范围/设计/测试出严重问题的征兆，不是救命稻草;疲劳的程序员更易破坏测试、引入回归，整体速度反而下降;正确做法是用计划游戏砍范围，用测试和集成压低返工"
+        },
+        {
+          "key": "D",
+          "text": "加班只与个人意志有关，与项目工程状态无关"
+        }
+      ],
+      "answer": "C",
+      "accuracy": 98.11,
+      "explanation": "从 XP 视角看，**长期加班是计划/范围/设计/测试出了严重问题的征兆**。XP 提倡「可持续的步伐（Sustainable Pace）」——每周不超过 40 小时。疲劳的程序员更易写出 bug、跳过测试、引入回归。真正的解决方案是用计划游戏砍范围或调整优先级，而非简单堆砌加班时间。",
+      "source": "参考：Kent Beck, \"Extreme Programming Explained\"",
+      "source_url": "https://www.agilealliance.org/glossary/sustainable-pace/"
+    },
+    {
+      "id": 19,
+      "type": "single",
+      "stem": "某新项目刚启动，架构师建议先建好数据库 schema、领域模型、缓存层、加密货币接口等\"以后可能要用\"的扩展点。最贴合演进式设计观的做法是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "必须先把数据库和领域模型建齐，否则后期重构成本指数级飙升"
+        },
+        {
+          "key": "B",
+          "text": "起步什么都不上，用内存结构跑最小闭环;海量数据到来时才引入数据库，业务复杂度（if-else 嵌套到第三层）到来时才引入领域模型;存疑时默认 YAGNI"
+        },
+        {
+          "key": "C",
+          "text": "按行业最佳实践直接引入完整三层架构 + 微服务"
+        },
+        {
+          "key": "D",
+          "text": "应该提前设计加密货币等\"明天可能要\"的扩展点，留出可逆开关"
+        }
+      ],
+      "answer": "B",
+      "accuracy": 98.11,
+      "explanation": "演进式设计（Evolutionary Design）的核心思想：**存疑时默认不上**。起步时用最简单的方案跑通最小闭环（如内存结构而非数据库），当真正的需求（如海量数据、复杂业务逻辑）到来时才引入相应的技术组件。这与 YAGNI 和简单设计一脉相承：不在不确定需要的时候提前构建扩展点。",
+      "source": "参考：Martin Fowler, \"Evolutionary Design\" & \"Yagni\"",
+      "source_url": "https://martinfowler.com/bliki/EvolutionaryDesign.html"
+    },
+    {
+      "id": 20,
+      "type": "single",
+      "stem": "关于 AI 时代 TDD 的真正价值，最贴合讲义观点的判断是（）?",
+      "options": [
+        {
+          "key": "A",
+          "text": "TDD 在 AI 时代过时了——AI 自带正确性，先写测试是浪费"
+        },
+        {
+          "key": "B",
+          "text": "TDD 在 AI 时代只用于面试题，不影响实际开发"
+        },
+        {
+          "key": "C",
+          "text": "David Luhr 2024 提出:先写测试 = 把对业务的理解编码为可执行规格，AI 必须在规格约束下生成实现，从\"自由发挥\"变成\"目标规格\";同时迫使工程师在让 AI 写代码前先把需求想清楚——这恰是 TDD 在传统开发中的核心价值"
+        },
+        {
+          "key": "D",
+          "text": "TDD 让 AI 工具运行更快，是性能优化手段"
+        }
+      ],
+      "answer": "C",
+      "accuracy": 98.11,
+      "explanation": "David Luhr（2024）提出的观点：在 AI 时代，TDD 的价值不是降低，而是**升华**。先写测试 = 把对业务的理解编码为可执行的规格。AI 不是自由发挥，而必须在人类定义的测试约束下生成实现。TDD 从「验证正确性」变为了「定义正确性的标准」。这使 TDD 在 AI 辅助开发中更加不可或缺。",
+      "source": "参考：David Luhr, \"TDD in the Age of AI\" (2024)",
+      "source_url": "https://davidluhr.com/blog/tdd-ai-era/"
+    }
+  ]
+}

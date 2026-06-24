@@ -1,0 +1,8 @@
+# Python virtual environment
+.venv/
+
+# MkDocs build output
+site/
+
+# macOS
+.DS_Store

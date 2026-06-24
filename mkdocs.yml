@@ -1,0 +1,32 @@
+site_name: 南京大学《软件质量与管理》期末复习
+site_description: 敏捷软件开发 — 课堂小测在线答题系统
+site_author: 南京大学
+edit_uri: ""
+
+theme:
+  name: material
+  language: zh
+  # palette:
+  #   primary: amber
+  #   accent: amber
+  #   scheme: default
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - toc.follow
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - 首页: index.md
+  - 必背指南: recite.md
+  - 课堂小测: quiz/index.html
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true
