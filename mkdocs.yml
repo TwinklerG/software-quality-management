@@ -22,7 +22,18 @@ theme:
 nav:
   - 首页: index.md
   - 必背指南: recite.md
+  - 课程总结必背: final-recite.md
   - 课堂小测: quiz/index.html
+  - 往年试卷解答:
+      - 2023年A卷: exams/2023.md
+      - 2022年: exams/2022.md
+      - 2021年: exams/2021.md
+      - 2020年期中考: exams/2020.md
+      - 2018年: exams/2018.md
+      - 2016年: exams/2016.md
+      - 2015年: exams/2015.md
+      - 2014年: exams/2014.md
+      - 2013年: exams/2013.md
 
 markdown_extensions:
   - admonition
