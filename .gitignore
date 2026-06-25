@@ -6,3 +6,7 @@ site/
 
 # macOS
 .DS_Store
+
+# Assets
+
+assets/
