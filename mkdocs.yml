@@ -19,6 +19,11 @@ theme:
     text: Roboto
     code: Roboto Mono
 
+extra:
+  analytics:
+    provider: google
+    property: G-P7LZV0B9WP
+
 nav:
   - 首页: index.md
   - 必背指南: recite.md
