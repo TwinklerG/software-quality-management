@@ -44,5 +44,6 @@ markdown_extensions:
   - admonition
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.mark
   - toc:
       permalink: true
