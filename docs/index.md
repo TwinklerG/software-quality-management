@@ -10,11 +10,13 @@
 ### 课堂练习
 
 - **[课堂小测](quiz/index.html)** — Agile、Scrum、XP、Kanban、DevOps 在线答题系统
+- **[课堂小测答案](exams/quiz-answers.md)** — 134 题完整答案解析（Agile/Scrum/XP/Kanban/DevOps）
 
-### 往年试卷解答
+### 往年试题解答
 
 | 试卷 | 说明 |
 |---|---|
+| [课上选择题](exams/classroom-quiz.md) | 37 题课上选择题答案解析 |
 | [2023年A卷](exams/2023.md) | 2023年期末A卷答案解析 |
 | [2022年](exams/2022.md) | 2022年期末试卷答案解析 |
 | [2021年](exams/2021.md) | 2021年期末试卷答案解析 |
