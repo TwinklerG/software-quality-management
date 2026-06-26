@@ -610,7 +610,7 @@ Motivation = Valence × Expectancy
 
 #### 6.4 通用计划框架
 
-![通用计划框架](./final-recite.assets/uni-plan-framework.png)
+![通用计划框架](./assets/uni-plan-framework.png)
 
 <u>**通用计划框架计划链路**（背）</u>：
 
@@ -1215,7 +1215,7 @@ L = λW
 
 ## 附录三：DevOps 要点
 
-### DevOps Three Ways
+### <u>DevOps Three Ways（背）</u>
 
 **First Way：从左到右的流动** —— 打通开发→测试→部署→运维→生产的价值流。小批量、限制 WIP、持续构建/集成/交付。
 
