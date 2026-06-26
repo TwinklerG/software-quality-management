@@ -8,5 +8,4 @@ site/
 .DS_Store
 
 # Assets
-
-assets/
+/assets/
