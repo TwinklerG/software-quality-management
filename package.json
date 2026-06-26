@@ -1,0 +1,13 @@
+{
+  "name": "software-quality-management",
+  "version": "1.0.0",
+  "description": "南京大学《软件质量与管理》期末复习 - 课堂小测在线答题系统",
+  "private": true,
+  "scripts": {
+    "build": "mkdocs build",
+    "serve": "mkdocs serve"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.6.1"
+  }
+}
