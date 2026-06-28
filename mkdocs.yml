@@ -28,10 +28,10 @@ nav:
   - 首页: index.md
   - 必背指南: recite.md
   - 课程总结必背: final-recite.md
-  - 课堂小测: quiz/index.html
   - 课堂小测答案: exams/quiz-answers.md
   - 往年试题解答:
       - 课上选择题: exams/classroom-quiz.md
+      - 2024年: exams/2024.md
       - 2023年A卷: exams/2023.md
       - 2022年: exams/2022.md
       - 2021年: exams/2021.md
