@@ -308,6 +308,15 @@
 3. 承诺是**可信（行）**的
 4. 向**团队**承诺（团队承诺比个人承诺激励作用更大）
 
+<u>**知识工作领导者的四个品质**（背）</u>（已考 2024Spring）：
+
+| 品质 | English | 含义 |
+|---|---|---|
+| **诚实** | Honest | 信守承诺，言行一致 —— "did what they said they would do"。让团队成员感到信任和尊重。
+| **能力** | Competent | 展现出卓越的**技能和知识** —— "skills and knowledge"。知识工作团队的领导者需要让成员信服其专业判断。 |
+| **远见** | Visionary | 能够超越眼前的挑战和任务，具备明确和可信的未来愿景 —— "can they see past the horizon, do they have a believable view of a desirable future?" |
+| **激励** | Inspirational | 传播积极、充满热情和能量的未来愿景 —— "do they have a positive, enthusiastic, and energetic view of the future?" |
+
 > **知识点出处**：`软件质量与管理.第三讲.pdf` Slide 5-6, 9-11, 34
 
 #### 5.4 不同的激励方式
@@ -1439,7 +1448,7 @@ L = λW
 35. **DORA 2024**：Elite vs Low 部署频率 182 倍差距
 36. **Maslow 五层** + 期望理论（M = V × E）
 37. **自主团队六大特征**
-38. **经理 vs 领导者对比** + 三种领导方式（威逼/利诱/鼓励承诺）
+38. **经理 vs 领导者对比** + 三种领导方式（威逼/利诱/鼓励承诺）+ 四个品质（诚实/能力/远见/激励，2024Spring）
 39. **承诺四项保证**：自愿、公开、可信、向团队承诺
 40. **Herzberg 双因素**（激励因素 vs 保健因素）+ McGregor X/Y 理论
 41. **WBS**：最底层要素是实现目标的充分必要条件；不一定对应 OBS
